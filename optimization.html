@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Оптимизация</title>
+<meta name="description" content="Оптимальный — наилучший в заданных условиях. Качество оценивается с помощью критерия оптимальности, а условия задаются в виде ограничений на дополнительные критерии.">
+<meta name="keywords" content="Оптимизация">
+<link rel="canonical" href="https://systems-analysis.ru/optimization.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/optimization.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/optimization.html">
+<meta property="og:title" content="Оптимизация">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/optimization.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="Оптимальный — наилучший в заданных условиях. Качество оценивается с помощью критерия оптимальности, а условия задаются в виде ограничений на дополнительные критерии.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="js/theme-init.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/optimization.html#article",
+    "headline": "Оптимизация",
+    "description": "Оптимальный — наилучший в заданных условиях. Качество оценивается с помощью критерия оптимальности, а условия задаются в виде ограничений на дополнительные критерии.",
+    "url": "https://systems-analysis.ru/optimization.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "ru",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/optimization.html"
+    },
+    "keywords": [
+        "оптимизация",
+        "оптимальный",
+        "критерий оптимальности",
+        "целевая функция",
+        "ограничения",
+        "исследование операций"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01",
+    "about": {
+        "@type": "DefinedTerm",
+        "name": "Оптимизация",
+        "description": "Нахождение наилучшего решения в заданных условиях, где качество оценивается с помощью критерия оптимальности, а условия задаются в виде ограничений.",
+        "sameAs": [
+            "https://www.wikidata.org/entity/Q141495",
+            "https://ru.wikipedia.org/wiki/Оптимизация_(математика)",
+            "https://en.wikipedia.org/wiki/Mathematical_optimization",
+            "https://systems-analysis.ru/wiki/Оптимизация",
+            "https://systems-analysis.ru/eng/Optimization"
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://systems-analysis.ru/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Теория принятия решений",
+            "item": "https://systems-analysis.ru/decision_theory.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Оптимизация"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Основная навигация">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Меню</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/">Главная страница</a>
+        <span aria-hidden="true">·</span>
+        <a href="sections.html">Разделы</a>
+        <span aria-hidden="true">·</span>
+        <a href="/wiki/">Вики</a>
+        <span aria-hidden="true">·</span>
+        <a href="books.html">Книги</a>
+        <span aria-hidden="true">·</span>
+        <a href="catalog.html">Каталог</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/optimization.html">English</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Переключить тему"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Переключить шрифт"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Оптимизация</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p><strong>Оптимальный</strong> — наилучший в заданных условиях. Качество оценивается с помощью критерия оптимальности, а условия задаются в виде ограничений на дополнительные критерии.</p>
+<p>Стремление к повышению эффективности труда, творчества, любой целенаправленной деятельности, это естественное стремление человека нашло выражение, ясную и понятную форму в идее оптимальности. Различие между строго научным и «общепринятым», житейским пониманием оптимальности совсем невелико. Правда, встречающиеся выражения типа «наиболее оптимальный» или «добьемся максимального эффекта при минимуме затрат» математически некорректны, но лица, использующие эти выражения, на самом деле просто нестрого и неудачно выражают правильную мысль: как только дело касается конкретной оптимизации, они быстро и легко исправляют формулировки.</p>
+<p>Оптимизация — в математике, информатике и исследовании операций задача нахождения экстремума (минимума или максимума) целевой функции в некоторой области конечномерного векторного пространства, ограниченной набором линейных и/или нелинейных равенств и/или неравенств.</p>
+<p>Оптимизационные <a href="model.html" class="text-link">модели</a> предназначены для определения оптимальных (наилучших) с точки зрения некоторого критерия параметров моделируемого объекта или же для поиска оптимального (наилучшего) режима управления некоторым процессом. Часть параметров модели относят к параметрам управления, изменяя которые можно получать различные варианты наборов значений выходных параметров. Как правило, данные модели строятся с использованием одной или нескольких дескриптивных моделей и включают некоторый критерий, позволяющий сравнивать различные варианты наборов значений выходных параметров между собой с <a href="goal.html" class="text-link">целью</a> выбора наилучшего. На область значений входных параметров могут быть наложены ограничения в виде равенств и неравенств, связанные с особенностями рассматриваемого объекта или процесса. Целью оптимизационных моделей является поиск таких допустимых параметров управления, при которых критерий выбора достигает своего «наилучшего значения».</p>
+<p>Задача формулируется в виде математической модели. Типовая математическая модель исследования операций  представлена в следующей формулировке:</p>
+<p>Максимизация или минимизация целевой функции, при условии выполнения ограничений</p>
+<p>Оптимальными называются решения которые по тем или другим признакам предпочтительнее других. Каждый выбор лучшего варианта конкретен, поскольку основан на соответствии установленным критериям. Говоря об оптимальном варианте, указывают эти критерии («оптимальный по…»). То, что оптимально при одном критерии, не обязательно будет таковым при другом.</p>
+<p>Допустимое решение — если оно удовлетворяет всем ограничениям модели. Допустимых решений в отдельных случаях может быть бесконечное множество.</p>
+<p>Оптимальное решение — если кроме того, что оно допустимо, целевая функция в этом решении достигает максимального или минимального значения.</p>
+<p>Оптимизация — максимизация или минимизация целевой функции.</p>
+<p>Оптимизационная модель — это модель принятия решения, содержащая показатель эффективности (целевую функцию), который необходимо оптимизировать при условии соблюдения набора заданных ограничений.</p>
+<p>Оптимальное решение — допустимый набор значений переменных решения, оптимизирующий целевую функцию оптимизационной модели.</p>
+<p>Большое число встречающихся на практике задач выбора сводится к нахождению лучших или наиболее предпочтительных для человека вариантов, а нередко — к поиску единственно лучшего варианта. При этом у каждого лица принимающего решение (ЛПР) есть собственные субъективные представления о том, что для него является предпочтительным в конкретной ситуации выбора.</p>
+<p>Имеется достаточно много задач, для которых можно построить математическую модель выбора, где понятие лучшего варианта формализуется путем задания одного или нескольких числовых показателей эффективности или критериев качества решения. Эти показатели, хотя и задаются ЛПР, носят объективный характер, определяемый содержанием решаемой задачи, и выражаются какими-либо функциями, зависящими от переменных, которыми измеряются свойства вариантов. В таких случаях наиболее предпочтительным для ЛПР вариантом решения задачи выбора принято считать так называемый оптимальный вариант, который соответствует экстремальному значению одного или нескольких показателей эффективности решения при существующих условиях.</p>
+<p>Принципиальным моментом для формулировки задачи оптимального выбора является возможность описания проблемной ситуации и предпочтений ЛПР в количественной форме. Это означает, что, во-первых, возможные варианты решения (альтернативы, объекты, способы действия) определяются количественными признаками (переменными, параметрами, атрибутами), измеряемыми с помощью числовых шкал. Во-вторых, должны быть заданы количественные же показатели (критерии оптимальности, показатели эффективности, целевые функции, функции ценности), по величине которых оценивается качество выбранного варианта. Такого рода ситуации характерны для хорошо структурируемых проблем и повторяющихся ситуаций выбора, типичных для исследования операций и оптимального управления.</p>
+<p>Для анализа возможных вариантов решения проблемы (способов достижения цели) и выбора среди них одного или нескольких лучших вариантов строятся формальные модели оптимального выбора. Модель дает упрощенное представление реальной проблемы и должна отражать наиболее важные и объективно существующие зависимости и связи между вариантами, описывающими их признаками и ограничениями, которые задаются управляемыми и неуправляемыми факторами. Построение такой модели — задача консультантов-аналитиков и экспертов при участии ЛПР. При построении модели выбора нужно соизмерять адекватность и детальность модели с точностью требуемого решения реальной задачи выбора, а также с объемом необходимой для поиска решения информации — как имеющейся в наличии, так и получаемой дополнительно.</p>
+<p>Оптимизационные проблемы являются строго формальными математическими задачами. Практическое значение решений таких задач прямо зависит от того, насколько хороша исходная математическая модель. В сложных системах математическое моделирование является затруднительным, приблизительным, неточным. Чем сложнее <a href="system.html" class="text-link">система</a>, тем осторожнее следует относиться к ее оптимизации.</p>
+<p>С позиций системного анализа отношение к оптимизации можно сформулировать следующим образом: это мощное средство повышения эффективности, но использовать его следует все более осторожно по мере возрастания сложности проблемы.</p>
+<p>При всей очевидной полезности идеи оптимизации практика требует необходимости осторожного обращения с ней. Для такого заключения имеются достаточно веские основания.</p>
+<ol>
+  <li>Оптимальное решение часто оказывается неустойчивым: незначительные на первый взгляд изменения в условиях задачи могут привести к выбору существенно отличающихся альтернатив.</li>
+  <li>Рассматриваемая система является частью некоторой большей системы, и тогда локальная оптимизация совсем не обязательно приведет к тому же результату, который потребуется от подсистемы при оптимизации системы в целом. Это приводит к необходимости увязывать критерии подсистем с критериями системы, часто делая ненужной локальную оптимизацию.</li>
+  <li>Критерии характеризуют цель лишь косвенно, иногда лучше, иногда хуже, но всегда приближенно. Максимизация критерия оптимальности часто отождествляется с целью, а на самом деле это разные вещи. Фактически критерий и цель относятся друг к другу как модель и оригинал, со всеми вытекающими отсюда особенностями. Многие цели трудно или даже невозможно количественно описать.</li>
+  <li>Не задав всех необходимых ограничений, мы можем одновременно с максимизацией основного критерия получить непредвиденные и нежелательные сопутствуюшие эффекты.</li>
+</ol>
+</div>
+      </article>
+    </div>
+
+    
+  
+    <div class="links">
+  <div class="links-section">
+    <h2>Методики</h2>
+    <ul>
+      <li><a href="methodology_or.html">Методология исследования операций</a></li>
+    </ul>
+  </div>
+  <div class="links-section">
+    <h2>Перейти к статье</h2>
+    <ul>
+      <li><a href="modelling.html">Моделирование</a></li>
+      <li><a href="systems_analysis.html">Системный анализ</a></li>
+      <li><a href="operation_reserch.html">Исследование операций</a></li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="/">Главная</a> <span aria-hidden="true">/</span>
+    <a href="/decision_theory.html">Теория принятия решений</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Оптимизация</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Переключить тему"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_ru">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis_ru">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/">English</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Переключить тему"></button>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+</body>
+</html>

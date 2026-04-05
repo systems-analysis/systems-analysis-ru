@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Задача принятия решения</title>
+<meta name="description" content="Задача принятия решения состоит в формировании множества возможных вариантов, обеспечивающих разрешение проблемной ситуации при существующих ограничениях, и выделении среди этих вариантов одного лучшего или нескольких предпочтительных вариантов, удовлетворяющих предъявляемым к ним требованиям.">
+<meta name="keywords" content="варианта,варианты,решения,системный,принятие,анализ,ограничения,проблема,цели,выбор,признак,критерий,предпочтения">
+<link rel="canonical" href="https://systems-analysis.ru/decision_theory_model.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/decision_theory_model.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/decision_theory_model.html">
+<meta property="og:title" content="Задача принятия решения">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/decision_theory_model.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="Задача принятия решения состоит в формировании множества возможных вариантов, обеспечивающих разрешение проблемной ситуации при существующих ограничениях, и выделении среди этих вариантов одного лучшего или нескольких предпочтительных вариантов, удовлетворяющих предъявляемым к ним требованиям.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="js/theme-init.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/decision_theory_model.html#article",
+    "headline": "Задача принятия решения",
+    "description": "Задача принятия решения состоит в формировании множества возможных вариантов, обеспечивающих разрешение проблемной ситуации при существующих ограничениях, и выделении среди этих вариантов одного лучшего или нескольких предпочтительных вариантов, удовлетворяющих предъявляемым к ним требованиям.",
+    "url": "https://systems-analysis.ru/decision_theory_model.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "ru",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/decision_theory_model.html"
+    },
+    "keywords": [
+        "варианта",
+        "варианты",
+        "решения",
+        "системный",
+        "принятие",
+        "анализ",
+        "ограничения",
+        "проблема",
+        "цели",
+        "выбор",
+        "признак",
+        "критерий",
+        "предпочтения"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01",
+    "about": {
+        "@type": "DefinedTerm",
+        "name": "Задача принятия решения",
+        "description": "Формирование множества возможных вариантов, обеспечивающих разрешение проблемной ситуации при существующих ограничениях, и выделение среди них лучших.",
+        "sameAs": [
+            "https://systems-analysis.ru/wiki/Задача_принятия_решения",
+            "https://systems-analysis.ru/eng/Decision_problem"
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://systems-analysis.ru/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Теория принятия решений",
+            "item": "https://systems-analysis.ru/decision_theory.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Задача принятия решения"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Основная навигация">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Меню</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/">Главная страница</a>
+        <span aria-hidden="true">·</span>
+        <a href="sections.html">Разделы</a>
+        <span aria-hidden="true">·</span>
+        <a href="/wiki/">Вики</a>
+        <span aria-hidden="true">·</span>
+        <a href="books.html">Книги</a>
+        <span aria-hidden="true">·</span>
+        <a href="catalog.html">Каталог</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/decision_theory_model.html">English</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Переключить тему"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Переключить шрифт"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Задача принятия решения</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p>Постановка <strong>задачи принятия решения</strong></p>
+<p>Задача принятия решения состоит в формировании множества возможных вариантов, обеспечивающих разрешение проблемной ситуации при существующих ограничениях, и выделении среди этих вариантов одного лучшего или нескольких предпочтительных вариантов, удовлетворяющих предъявляемым к ним требованиям. Формально задачу принятия решения D можно записать в следующем обобщенном виде:</p>
+<p>D = ⟨F, A, X, G, P⟩</p>
+<p>Где</p>
+<p>F — формулировка задачи принятия решения, которая включает в себя содержательное описание стоящей <a href="problem.html" class="text-link">проблемы</a> и при необходимости ее модельное представление, определение цели или целей, которые должны быть достигнуты, а также требования к виду окончательного результата;</p>
+<p>А — совокупность возможных вариантов (альтернатив), из которых производится выбор. Это могут быть реально существующие варианты, в качестве которых в зависимости от контекста задачи выступают объекты, кандидаты, способы достижения цели, действия, решения и т. п., либо гипотетическое множество всех теоретически возможных вариантов, которое может быть даже бесконечным. Выбор возникает только тогда, когда имеется не менее двух возможных вариантов решения проблемы;</p>
+<p>X — совокупность признаков (атрибутов, параметров), описывающих варианты и их отличительные особенности. В качестве признаков выступают, во‑первых, объективные показатели, которые характеризуют те или иные свойства, присущие вариантам, и которые, как правило, можно измерить; во‑вторых, субъективные оценки, которые обычно даются по специально отобранным или сконструированным критериям, отражающим важные для участников выбора черты вариантов.</p>
+<p>G — совокупность условий, ограничивающих область допустимых вариантов решения задачи. Ограничения могут быть описаны как содержательным образом, так и заданы в виде некоторых формальных требований к вариантам и/или их признакам. Например, это могут быть ограничения на значения какого-либо признака или различная степень характерности (выраженности) признака для тех или иных вариантов, или невозможность одновременного сочетания определенных значений признаков для реально существующих вариантов.</p>
+<p>Р — предпочтения одного или нескольких ЛПР, которые служат основой для оценки и сравнения возможных вариантов решения проблемы, отбора допустимых вариантов и поиска наилучшего или приемлемого варианта. Достаточно часто для упрощения постановки задачи принятия решения часть информации, описывающей предпочтения ЛПР, превращается в ограничения.</p>
+<p>Факторы, характеризующие проблемную ситуацию, условно делятся на две группы: управляемые и неуправляемые.</p>
+<ul>
+  <li>управляемые факторы, выбор которых зависит от ЛПР, — суть поставленные цели, варианты (альтернативы) их достижения, субъективные оценки вариантов и степени достижения целей.</li>
+</ul>
+<ul>
+  <li>неуправляемые факторы не зависят от ЛПР. Они определяют объективные признаки вариантов и отчасти устанавливают ограничения на выбор возможных вариантов.</li>
+</ul>
+<p><strong>Факторы подразделяются также:</strong></p>
+<ul>
+  <li>на определенные, или детерминированные, с известными и/или заранее заданными точными характеристиками;</li>
+  <li>вероятностные, или стохастические, с известными и/или заранее заданными случайными характеристиками;</li>
+  <li>неопределенные, или неизвестные, с нечетко определенными и/или неизвестными характеристиками, но иногда с известной областью изменения их значений.</li>
+</ul>
+</div>
+      </article>
+    </div>
+
+    
+  
+    <div class="links">
+  <div class="links-section">
+    <h2>Перейти к статье</h2>
+    <ul>
+      <li><a href="decision_theory.html">Теория принятия решений</a></li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="/">Главная</a> <span aria-hidden="true">/</span>
+    <a href="/decision_theory.html">Теория принятия решений</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Задача принятия решения</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Переключить тему"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_ru">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis_ru">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/">English</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Переключить тему"></button>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+</body>
+</html>

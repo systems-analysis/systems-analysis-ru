@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Процесс моделирования</title>
+<meta name="description" content="Процесс моделирования можно представить как переход от моделей одного класса к другому. Условно выделяют три больших класса моделей: когнитивные, содержательные и формальные модели. Они составляют три взаимосвязанных уровня моделирования, которые нельзя рассматривать изолированно один от другого.">
+<meta name="keywords" content="Процесс моделирования,модель,задача,моделирование,решение,программный,алгоритм,системный анализ">
+<link rel="canonical" href="https://systems-analysis.ru/modeling_process.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/modeling_process.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/modeling_process.html">
+<meta property="og:title" content="Процесс моделирования">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/modeling_process.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="Процесс моделирования можно представить как переход от моделей одного класса к другому. Условно выделяют три больших класса моделей: когнитивные, содержательные и формальные модели. Они составляют три взаимосвязанных уровня моделирования, которые нельзя рассматривать изолированно один от другого.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="js/theme-init.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/modeling_process.html#article",
+    "headline": "Процесс моделирования",
+    "description": "Процесс моделирования можно представить как переход от моделей одного класса к другому. Условно выделяют три больших класса моделей: когнитивные, содержательные и формальные модели. Они составляют три взаимосвязанных уровня моделирования, которые нельзя рассматривать изолированно один от другого.",
+    "url": "https://systems-analysis.ru/modeling_process.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "ru",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/modeling_process.html"
+    },
+    "keywords": [
+        "Процесс моделирования",
+        "модель",
+        "задача",
+        "моделирование",
+        "решение",
+        "программный",
+        "алгоритм",
+        "системный анализ"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://systems-analysis.ru/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Моделирование",
+            "item": "https://systems-analysis.ru/modelling.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Процесс моделирования"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Основная навигация">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Меню</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/">Главная страница</a>
+        <span aria-hidden="true">·</span>
+        <a href="sections.html">Разделы</a>
+        <span aria-hidden="true">·</span>
+        <a href="/wiki/">Вики</a>
+        <span aria-hidden="true">·</span>
+        <a href="books.html">Книги</a>
+        <span aria-hidden="true">·</span>
+        <a href="catalog.html">Каталог</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/modeling_process.html">English</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Переключить тему"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Переключить шрифт"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Процесс моделирования</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p>Процесс моделирования можно представить как переход от моделей одного класса к другому. Условно выделяют три больших класса моделей: когнитивные, содержательные и формальные <a href="model.html" class="text-link">модели</a>. Они составляют три взаимосвязанных уровня моделирования, которые нельзя рассматривать изолированно один от другого. Взаимовлияние уровней моделирования связано со свойством потенциальности моделей. Создание любой модели сопряжено с появлением новых знаний об исследуемом объекте, что ведет к переоценке и уточнению концепций и взглядов на объект моделирования на разных уровнях. Данное обстоятельство приводит, в свою очередь, к пересмотру соответствующих содержательных и когнитивных моделей, обеспечивая спиральное развитие всех уровней моделирования исследуемого объекта.</p>
+<p>При наблюдении за объектом-оригиналом в голове исследователя формируется некий мысленный образ объекта, его идеальная модель, которую в научной литературе принято называть когнитивной (мысленной, способствующей познанию). Формируя такую модель, исследователь, как правило, стремится ответить на конкретные вопросы, поэтому от бесконечно сложного устройства объекта отсекается все ненужное с целью получения его более компактного и лаконичного описания. Представление когнитивной модели на естественном языке называется содержательной моделью.</p>
+<p>Когнитивные модели субъективны, так как формируются исследователем умозрительно на основе всех его предыдущих знаний и опыта. Получить представление о когнитивной модели можно только описав ее в знаковой форме. Нельзя утверждать, что когнитивные и содержательные модели эквивалентны, поскольку первые могут содержать элементы, которые исследователь не сможет или не хочет сформулировать. В то же время, если содержательная модель сформулирована кем-то другим или является продуктом коллективного творчества, то ее интерпретация, уровень понимания, степень доверия могут существенно изменяться в зависимости от того или иного интерпретатора. Содержательную модель часто называют технической постановкой проблемы.</p>
+<p><strong>По функциональному признаку и целям содержательные модели подразделяются на описательные, объяснительные и прогностические:</strong></p>
+<ul>
+  <li>Описательной моделью можно назвать любое описание объекта.</li>
+  <li>Объяснительная модель позволяет ответить на вопрос, почему что-либо происходит.</li>
+  <li>Прогностическая модель должна описывать будущее поведение объекта. Можно заметить, что прогностическая модель не обязана включать в себя объяснительную.</li>
+</ul>
+<p>Концептуальной моделью принято называть содержательную модель, при формулировке которой используются понятия и представления предметных областей знания, занимающихся изучением объекта моделирования.</p>
+<p>В более широком смысле под концептуальной моделью понимают содержательную модель, базирующуюся на определенной концепции или точке зрения. Выделяют три вида концептуальных моделей: логико-семантические, структурно-функциональные и причинно-следственные.</p>
+<ul>
+  <li>Логико-семантическая модель является описанием объекта в терминах и определениях соответствующих предметных областей знаний, включающим все известные логически непротиворечивые утверждения и факты. Анализ таких моделей осуществляется средствами логики с привлечением знаний, накопленных в соответствующих предметных областях.</li>
+  <li>При построении структурно-функциональной модели объект обычно рассматривается как целостная система, которую расчленяют на отдельные элементы или подсистемы. Части системы связываются структурными отношениями, описывающими подчиненность, логическую и временную последовательность решения отдельных задач. Для представления подобных моделей удобны различного рода схемы, карты и диаграммы.</li>
+  <li>Причинно-следственная модель часто используется для объяснения и прогнозирования поведения объекта. Данные модели ориентированы в основном на следующее: 1) выявление главных взаимосвязей между составными элементами изучаемого объекта; 2) определение того, как изменение одних факторов влияет на состояние компонентов модели; 3) понимание того, как в целом будет функционировать модель и будет ли она адекватно описывать динамику интересующих исследователя параметров.</li>
+</ul>
+<p>Формальная модель является представлением концептуальной модели с помощью одного или нескольких формальных языков (например, языков математических теорий, специальных языков моделирования или алгоритмических языков). В гуманитарных науках процесс моделирования во многих случаях заканчивается созданием концептуальной модели объекта. В естественно-научных дисциплинах, как правило, удается построить формальную модель.</p>
+<p>Если значение содержательных и формальных моделей для процесса познания более или менее осознается исследователями, то роль когнитивных моделей часто недооценивается. Это связано с субъективностью таких моделей и скрытостью процесса мышления. Однако существуют объекты и процессы, для которых роль когнитивных моделей особенно велика. Например, оператор или лицо, принимающее решения, осуществляет управление объектом или процессом главным образом на основании собственных когнитивных моделей. Велика роль данного типа моделей и в социальных науках.</p>
+<p>Математическое моделирование — это идеальное научное знаковое формальное моделирование, при котором описание объекта осуществляется на языке математики, а исследование модели проводится с использованием тех или иных математических методов.</p>
+<p>Любая математическая модель, предназначенная для научных исследований, позволяет по заданным исходным данным найти значения интересующих исследователя параметров моделируемого объекта или явления. Поэтому можно предположить, что суть любой подобной модели заключается в отображении некоторого заданного множества значений входных параметров на множество значений выходных параметров. Данное обстоятельство позволяет рассматривать математическую модель как некоторый математический оператор. Понятие оператора может трактоваться достаточно широко. Это может быть как некоторая функция, связывающая входные и выходные значения, так и отображение, представляющее символическую запись <a href="system.html" class="text-link">системы</a> алгебраических, дифференциальных, интегродифференциальных или интегральных уравнений. Это может быть некоторый алгоритм, совокупность правил или таблиц, обеспечивающих нахождение (или установление) выходных параметров по заданным исходным значениям.</p>
+<p>Определение математической модели через понятие оператора является более конструктивным с точки зрения построения классификации таких моделей, поскольку включает в себя все многообразие имеющихся в настоящее время математических моделей.</p>
+<p><strong>Преимущества математического моделирования в сравнении с натурным экспериментом:</strong></p>
+<ul>
+  <li>экономичность (в частности, сбережение ресурсов реальной системы);</li>
+  <li>возможность моделирования гипотетических, то есть не реализованных в природе объектов;</li>
+  <li>возможность реализации режимов, опасных или трудновоспроизводимых в натуре;</li>
+  <li>возможность изменения масштаба времени;</li>
+  <li>простота многоаспектного анализа;</li>
+  <li>большая прогностическая сила вследствие возможности выявления общих закономерностей;</li>
+  <li>универсальность технического и программного обеспечения проводимой работы (системы программирования и пакеты прикладных программ широкого назначения).</li>
+</ul>
+<p>Информационная модель — модель объекта, представленная в виде информации, описывающей существенные для данного рассмотрения параметры и переменные величины объекта, связи между ними, входы и выходы объекта и позволяющая путём подачи на модель информации об изменениях входных величин моделировать возможные состояния объекта.</p>
+</div>
+      </article>
+    </div>
+
+    
+  
+    <div class="links">
+  <div class="links-section">
+    <h2>Перейти к статье</h2>
+    <ul>
+      <li><a href="model.html">Модель</a></li>
+      <li><a href="modelling.html">Моделирование</a></li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="/">Главная</a> <span aria-hidden="true">/</span>
+    <a href="/modelling.html">Моделирование</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Процесс моделирования</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Переключить тему"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_ru">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis_ru">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/">English</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Переключить тему"></button>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+</body>
+</html>

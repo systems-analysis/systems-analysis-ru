@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Mathematical Modeling Process</title>
+<meta name="description" content="The mathematical modeling process: model construction, software development, validation, and analysis of results. Stages and features of modern computational models are described.">
+<meta name="keywords" content="mathematical modeling,model,computational methods,algorithm,validation,software,systems analysis,numerical methods">
+<link rel="canonical" href="https://systems-analysis.ru/en/mathmodeling_process.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/mathmodeling_process.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/mathmodeling_process.html">
+<meta property="og:title" content="The Mathematical Modeling Process">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/en/mathmodeling_process.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="The mathematical modeling process: model construction, software development, validation, and analysis of results. Stages and features of modern computational models are described.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="en_US">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="../js/theme-init.js"></script>
+<link rel="stylesheet" href="../css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/en/mathmodeling_process.html#article",
+    "headline": "The Mathematical Modeling Process",
+    "description": "The mathematical modeling process: model construction, software development, validation, and analysis of results. Stages and features of modern computational models are described.",
+    "url": "https://systems-analysis.ru/en/mathmodeling_process.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "en",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/en/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/en/mathmodeling_process.html"
+    },
+    "keywords": [
+        "mathematical modeling",
+        "model",
+        "computational methods",
+        "algorithm",
+        "validation",
+        "software",
+        "systems analysis",
+        "numerical methods"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://systems-analysis.ru/en/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Modeling",
+            "item": "https://systems-analysis.ru/en/modelling.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Mathematical Modeling Process"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Main navigation">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Menu</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/en/">Home</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/sections.html">Sections</a>
+        <span aria-hidden="true">·</span>
+        <a href="/eng/">Wiki</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/books.html">Books</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/catalog.html">Catalog</a>
+        <span aria-hidden="true">·</span>
+        <a href="/mathmodeling_process.html">Russian</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Toggle theme"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Toggle font"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">The Mathematical Modeling Process</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p>A distinctive feature of mathematical models created today is their complexity, which stems from the complexity of the objects being modeled. This leads to increasingly elaborate <a href="/en/model.html" class="text-link">models</a> and the need to draw simultaneously on several theories from different fields of knowledge, as well as to employ modern computational methods and computing technology for obtaining and analyzing simulation results. In the case of complex objects, it is usually impossible to satisfy all the requirements within a single model. Instead, an entire spectrum of models of the same object must be created (in some cases, a hierarchical set of "nested" models), each of which is best suited to solving the particular tasks assigned to it.</p>
+<p>The need for large-scale model construction calls for the development of a set of rules and approaches that would reduce the cost of model development and decrease the likelihood of errors that are difficult to eliminate later. Such a set of rules could be called a technology for creating mathematical models.</p>
+<p><strong>The process of constructing any mathematical model can be represented as a sequence of stages:</strong></p>
+<ol>
+  <li>Surveying the object to be modeled and preparing the terms of reference for model development (substantive problem statement);</li>
+  <li>Conceptual and mathematical formulation of the problem;</li>
+  <li>Qualitative analysis and verification of the model's correctness;</li>
+  <li>Selection and justification of solution methods;</li>
+  <li>Obtaining the solution;</li>
+  <li>Developing the solution algorithm and investigating its properties; implementing the algorithm as software;</li>
+  <li>Model validation;</li>
+  <li>Practical application of the constructed model.</li>
+</ol>
+<p>Mathematical models — especially those employing numerical methods and computing technology — require significant intellectual, financial, and time resources for their construction. Therefore, the decision to develop a new model is made only when there are no simpler ways to solve the <a href="/en/problem.html" class="text-link">problems</a> at hand (for example, by modifying an existing model).</p>
+<p>The need for a new model may arise in connection with scientific research, particularly at the intersection of different fields of knowledge. Once the decision to build a new mathematical model has been made, the commissioning party seeks a team to carry out the work. As a rule, the project team includes specialists of various backgrounds: applied mathematicians, domain experts who are thoroughly familiar with the object being modeled, and software developers. Once the decision to create the model is confirmed and the project team is formed, the survey phase begins. The primary objective of this phase is to prepare a substantive statement of the modeling problem. The substantive problem statement is a list of the key questions about the modeling object, expressed in plain language, that the commissioning party wishes to answer.</p>
+<p>Preparing the list of questions that the new model should answer is often a problem in its own right, requiring specialists with specific knowledge and abilities. They must not only have a thorough understanding of the subject domain of the modeling effort and be aware of the capabilities of modern computational mathematics and computing technology, but also be able to communicate with people — to draw out the practical experts who have an intuitive "feel" for the modeling object and the nuances of its behavior. Such specialists include, for example, systems analysts, systems engineers, and operations researchers.</p>
+<p>Based on an analysis of all the information gathered, the problem formulator must define the requirements for the future model such that, on one hand, they satisfy the commissioning party and, on the other, they allow the model to be implemented within the given timeframe and budget. Systems analysts (or operations researchers) must possess the ability, from a large volume of loosely structured and varied information about the modeling object and from the commissioning party's various vaguely expressed wishes and requirements, to distill the essentials that can actually be implemented.</p>
+<p>Based on the collected information about the modeling object, the systems analyst (engineer, operations researcher), together with the commissioning party, formulates the substantive problem statement, which, as a rule, is not final and may be refined and elaborated in the course of model development. However, all subsequent adjustments and changes to the substantive statement should be of a minor, non-fundamental nature.</p>
+<p>All the material gathered during the survey — the accumulated knowledge about the object, the substantive problem statement, additional requirements for model implementation and the presentation of results — is documented in the form of terms of reference for the design and development of the model. The terms of reference constitute the concluding document of the survey phase. The more complete the information gathered about the object during the survey, the more clearly the substantive problem can be stated, the more fully the accumulated experience and knowledge can be accounted for, and the more difficulties on subsequent stages of model development can be avoided.</p>
+<p>Unlike the substantive formulation, the conceptual formulation of the modeling problem is typically prepared by members of the project team without the involvement of the commissioning party's representatives, on the basis of the terms of reference developed in the previous phase and using available knowledge about the modeling object and requirements for the future model. Analysis and joint discussion of all available information about the modeling object by the team members makes it possible to form a conceptual model of the object — a synthesis of the cognitive models developed by each team member.</p>
+<p>The conceptual formulation of the modeling problem is a list of the key questions of interest to the commissioning party, expressed in the terms of specific disciplines, together with a set of hypotheses regarding the properties and behavior of the modeling object.</p>
+<p>The greatest difficulties in formulating the conceptual statement arise in models that lie at the intersection of different disciplines. Differences in traditions, concepts, and languages used to describe the same objects present very serious obstacles in the creation of interdisciplinary models.</p>
+<p>A completed conceptual formulation makes it possible to produce the mathematical formulation of the modeling problem, which includes a set of mathematical relations describing the behavior and properties of the modeling object.</p>
+<p>The mathematical formulation of the modeling problem is the set of mathematical relations describing the behavior and properties of the modeling object.</p>
+<p>A mathematical model is considered correct if all verification checks have been carried out with positive results: dimensional analysis, order-of-magnitude checks, checks of the nature of dependencies, extreme-case analysis, boundary conditions, physical meaning, and mathematical closure. The mathematical formulation is even more abstract than the conceptual one, since it reduces the original problem to a purely mathematical one for which well-developed solution methods exist.</p>
+<p>All methods for solving the problems that constitute the "core" of mathematical models can be divided into analytical and algorithmic (numerical).</p>
+<p>It should be noted that when analytical solutions are used to obtain numerical results, developing corresponding algorithms implemented on computers is also frequently required.</p>
+<p>However, the initial solution in this case takes the form of an analytical expression (or a set of expressions). Solutions based on algorithmic methods, by contrast, are fundamentally irreducible to exact analytical solutions of the problem in question.</p>
+<p>The choice of a particular research method depends to a large extent on the qualifications and experience of the project team members. Analytical methods are more convenient for subsequent analysis of results but are applicable only to relatively simple models. If the mathematical problem (even in a simplified formulation) admits an analytical solution, that solution is undoubtedly preferable to a numerical one.</p>
+<p>Algorithmic methods reduce the problem to an algorithm that performs a computational experiment using computing technology. The accuracy of modeling in such an experiment depends critically on the method chosen and its parameters. Algorithmic methods are generally more labor-intensive to implement and require that the project team members have strong knowledge of computational mathematics, an extensive library of specialized software, and powerful computing resources.</p>
+<p>Numerical methods are applicable only to well-posed mathematical problems, which significantly limits their use in mathematical modeling. Common to all numerical methods is the reduction of the mathematical problem to a finite-dimensional one. This is most often achieved by discretizing the original problem — that is, by replacing functions of a continuous argument with functions of a discrete argument. The application of any numerical method inevitably introduces error into the results. Three main components of the error arising in the numerical solution of the original problem can be distinguished: the inherent error associated with imprecise specification of the input data (initial and boundary conditions, equation coefficients and right-hand sides); the discretization error associated with the transition to a discrete analogue of the original problem; and the round-off error associated with the finite precision of numbers represented in a computer.</p>
+<p>A natural requirement for any specific computational algorithm is consistency in the orders of magnitude of these three types of error.</p>
+<p>A numerical, or approximate, method is always implemented as a computational algorithm. Therefore, all requirements that apply to algorithms in general also apply to computational algorithms. First and foremost, an algorithm must be feasible — it must solve the problem within an acceptable amount of computing time. An important characteristic of an algorithm is its accuracy — the ability to obtain a solution to the original problem to a given precision in a finite number of operations.</p>
+<p>The running time of an algorithm depends on the number of operations required to achieve the specified accuracy. For any mathematical problem, as a rule, several algorithms can be proposed that yield a solution to the desired accuracy, but in different numbers of operations. Algorithms that require fewer operations to achieve the same accuracy are called more economical, or more efficient.</p>
+<p>During the execution of a computational algorithm, a certain error arises at each computational step. From step to step, this error may grow or not grow (and in some cases may even decrease). If the error grows without bound during computation, the algorithm is said to be unstable, or divergent. Otherwise, the algorithm is said to be stable, or convergent.</p>
+<p>The enormous variety of numerical methods makes the selection of a particular method in each specific case considerably difficult. Since several alternative algorithmic methods can be used to implement a given model, the choice of a specific method is made with regard to which one is best suited to the model in terms of efficiency, stability, and accuracy of results, as well as which is most familiar to the project team members.</p>
+<p>In the creation of various software systems used for solving a wide range of research, design-engineering, and management tasks, mathematical models generally serve as the foundation today. This gives rise to the need to implement a model as a computer program. The process of developing reliable and efficient software is no less complex than all the preceding stages of mathematical model creation. Successfully solving this task is possible only with confident command of modern programming languages and technologies, knowledge of computing capabilities, available software, and the specifics of implementing computational mathematics methods.</p>
+<p><strong>The software development process can be broken down into several stages:</strong></p>
+<ul>
+  <li>preparing the terms of reference for software development;</li>
+  <li>designing the structure of the software system;</li>
+  <li>coding the algorithm;</li>
+  <li>testing and debugging;</li>
+  <li>maintenance and operation.</li>
+</ul>
+<p>The terms of reference for software development are documented in the form of a specification. At the design stage, the overall structure of the software system is formed. The entire program is divided into software modules. For each module, functional requirements are formulated and an algorithm implementing those functions is developed. The interaction scheme between modules — known as the data flow diagram of the software system — is defined. A testing plan is developed, and input data for testing individual modules and the system as a whole are specified.</p>
+<p><strong>Most programs implementing mathematical models consist of three main parts:</strong></p>
+<ul>
+  <li>a preprocessor (preparation and verification of the model's input data);</li>
+  <li>a solver (solving the problem, carrying out the computational experiment);</li>
+  <li>a postprocessor (visualization and presentation of the results).</li>
+</ul>
+<p>Considerable importance should be attached to adopting modern programming technologies. The purpose of any such technology is, first and foremost, to improve software reliability and increase developer productivity. The more serious and large-scale the software project, the more significant the questions of applying modern programming technologies become. Neglecting these matters can lead to significant time overruns and reduced reliability of the software system.</p>
+<p>A critical factor in ensuring the reliability and short development time of a software system for solving a specific class of problems is the availability of a well-developed library of mutually compatible software modules. A program is more reliable and can be developed faster when standard software components are used to the greatest possible extent.</p>
+<p>The adequacy of a mathematical model is the degree to which the results obtained from the developed model correspond to experimental data or the results of a benchmark problem.</p>
+<p><strong>Model validation serves two objectives:</strong></p>
+<ul>
+  <li>to verify the validity of the set of hypotheses formulated at the conceptual and mathematical formulation stages. One should proceed to hypothesis verification only after the solution methods have been verified and the software has undergone comprehensive debugging and elimination of all errors and conflicts;</li>
+  <li>to establish that the accuracy of the results conforms to the accuracy specified in the terms of reference.</li>
+</ul>
+<p>Validation of the developed mathematical model is performed by comparing it with available experimental data on the real object or with the results of other, previously created and well-proven models. In the first case, one speaks of validation by comparison with experiment; in the second, of comparison with the results of a benchmark problem.</p>
+<p>The question of modeling accuracy depends on the requirements placed on the model and its intended purpose. The accuracy of the experimental results or the specifics of the benchmark problem formulations must also be taken into account. For models intended for rough and order-of-magnitude calculations, an accuracy of 10–15% is considered satisfactory. For models used in control and monitoring <a href="/en/system.html" class="text-link">systems</a>, the required accuracy may be 1–2% or even higher.</p>
+<p>When problems with model adequacy arise, correction should begin with a systematic analysis of all possible causes of the discrepancy between modeling results and experimental results. First, the model should be investigated and its degree of adequacy assessed for various values of the variable parameters (initial and boundary conditions, parameters characterizing the properties of the modeling objects). If the model is inadequate in the parameter range of interest to the researcher, one may attempt to refine the values of the model's constants and initial parameters. If this still does not yield positive results, then the only remaining way to improve the model is to revise the adopted system of hypotheses. This decision effectively means returning to the second stage of the model development process and may entail not only a major change to the mathematical formulation but also to the solution methods (for example, a transition from analytical to numerical methods), a complete reworking of the software, and a new cycle of model validation. Therefore, the decision to revise the adopted system of hypotheses must be thoroughly weighed and made only when all other avenues for improving model adequacy have been exhausted.</p>
+<p>Descriptive models are designed to characterize the parameters under study in a given phenomenon or process, as well as to investigate the patterns governing changes in those parameters. These models can be used to study the properties and behavior of the object under investigation under various combinations of input data and operating conditions; in constructing optimization models; and in building simulation models of complex systems.</p>
+<p>Models developed for research purposes are typically not brought to the level of software systems intended for distribution to external users. Their lifespan is usually limited to the duration of the research program in the corresponding area. These models are characterized by an exploratory nature, the use of new computational procedures and algorithms, and an undeveloped user interface.</p>
+<p>Models and the software systems built on them that are intended for subsequent distribution to external users or for commercial release feature a well-developed, user-friendly interface and powerful preprocessors and postprocessors. These models are usually based on proven and well-established formulations and computational procedures. However, it should be remembered that such models are designed only for solving a clearly defined class of problems.</p>
+<p>Regardless of the intended application of the model, the development team is obligated to carry out both qualitative and quantitative analysis of the modeling results.</p>
+<p>Through working with the model, the developers become specialists in the domain associated with the modeling object. They develop a sufficiently thorough understanding of the object's properties and are able to predict and explain its behavior.</p>
+<p><strong>A comprehensive analysis of the modeling results therefore makes it possible to:</strong></p>
+<ul>
+  <li>modify the object under consideration, find its optimal characteristics, or at the very least take its behavior and properties into account in the best possible way;</li>
+  <li>delineate the model's domain of applicability;</li>
+  <li>verify the validity of the hypotheses adopted at the mathematical formulation stage and assess the possibility of simplifying the model to improve its efficiency while preserving the required accuracy;</li>
+  <li>indicate the direction in which the model should be further developed.</li>
+</ul>
+</div>
+      </article>
+    </div>
+
+
+
+    <div class="links">
+  <div class="links-section">
+    <h2>Related articles</h2>
+    <ul>
+      <li><a href="/en/model.html">Model</a></li>
+      <li><a href="/en/modelling.html">Modeling</a></li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumbs">
+    <a href="/en/">Home</a> <span aria-hidden="true">/</span>
+    <a href="/en/modelling.html">Modeling</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">The Mathematical Modeling Process</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Toggle theme"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_en">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/mathmodeling_process.html">Russian</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+  </footer>
+
+</div>
+
+<script src="../js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+</body>
+</html>

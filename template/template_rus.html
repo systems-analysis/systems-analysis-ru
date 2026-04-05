@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Шаблон</title>
+<meta name="theme-color" content="#fff" id="theme-color">
+<script>
+(function() {
+  var theme = null, font = null;
+  try { theme = localStorage.getItem('theme'); font = localStorage.getItem('font'); } catch(e) {}
+  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    document.getElementById('theme-color').content = 'rgb(32, 32, 32)';
+  }
+  if (font === 'sans-serif') {
+    document.documentElement.classList.add('sans-serif');
+  }
+})();
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #fff;
+  --fg: #000;
+  --fg-strong: #111;
+  --fg-muted: #555;
+  --fg-secondary: #666;
+  --fg-separator: #999;
+  --link: #0060a0;
+  --link-underline: rgba(0, 96, 160, 0.15);
+  --link-visited: #70a0b0;
+  --link-visited-underline: rgba(112, 160, 176, 0.15);
+  --link-accent: #0062bc;
+  --link-accent-hover: #004080;
+  --link-accent-underline: #e3f0f8;
+  --link-accent-underline-thin: rgba(0, 98, 188, 0.35);
+  --link-text: #003366;
+  --link-text-hover: #002244;
+  --link-text-underline: rgba(0, 51, 102, 0.35);
+  --rule: rgba(0, 0, 0, 0.15);
+  --max-width: 1500px;
+  --margin-top: 48px;
+  --margin-x: 9%;
+  --margin-x-compact: 4%;
+  --text-max: 1020px;
+  background: var(--bg);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --bg: rgb(32, 32, 32);
+  --fg: rgb(192, 192, 192);
+  --fg-strong: rgb(210, 210, 210);
+  --fg-muted: rgb(140, 140, 140);
+  --fg-secondary: rgb(145, 145, 145);
+  --fg-separator: rgb(90, 90, 90);
+  --link: rgb(50, 160, 230);
+  --link-underline: rgba(50, 160, 230, 0.3);
+  --link-visited: rgb(110, 140, 185);
+  --link-visited-underline: rgba(110, 140, 185, 0.3);
+  --link-accent: rgb(50, 160, 230);
+  --link-accent-hover: rgb(192, 192, 192);
+  --link-accent-underline: rgba(50, 160, 230, 0.3);
+  --link-accent-underline-thin: rgba(50, 160, 230, 0.3);
+  --link-text: rgb(90, 170, 225);
+  --link-text-hover: rgb(192, 192, 192);
+  --link-text-underline: rgba(90, 170, 225, 0.3);
+  --rule: rgba(192, 192, 192, 0.25);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.no-transitions *,
+.no-transitions *::before,
+.no-transitions *::after {
+  transition: none !important;
+}
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/22px system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid var(--link-underline);
+  transition: border-color 0.2s ease-out, color 0.2s ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+a:visited {
+  color: var(--link-visited);
+  border-color: var(--link-visited-underline);
+}
+a:hover {
+  color: var(--fg);
+  border-color: var(--rule);
+  transition: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--link-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+#top:focus {
+  outline: none;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.header {
+  padding: var(--margin-top) 0 40px;
+  margin: 0 var(--margin-x);
+}
+
+.article-title {
+  font: bold 45px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--fg);
+  max-width: var(--text-max);
+  margin-bottom: 0.45em;
+  overflow-wrap: break-word;
+}
+
+.article-desc {
+  font: 18px/1.6 Georgia, "Times New Roman", Times, serif;
+  max-width: var(--text-max);
+}
+
+/* --- Content --- */
+
+.content {
+  margin: 0 var(--margin-x) 60px;
+}
+
+/* --- Article --- */
+
+.note {
+  margin-bottom: 0;
+}
+
+.note-title {
+  font: bold 30px/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--fg);
+  max-width: 720px;
+  margin-bottom: 23px;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+.note-title a,
+.note-title a:visited {
+  color: var(--fg);
+  border-color: var(--rule);
+}
+
+.note-text {
+  font: 18px/1.6 Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 16px;
+}
+.note-text p {
+  max-width: var(--text-max);
+  margin: 0 0 24px;
+}
+.note-text blockquote {
+  max-width: var(--text-max);
+  margin: 32px 0;
+  padding: 0 0 0 40px;
+  font-style: italic;
+}
+
+.note-text blockquote .quote-source {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 15px;
+  color: var(--fg-muted);
+}
+
+/* Failsafes: media */
+.note-text img,
+.note-text video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 24px 0;
+}
+
+.note-text iframe {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 24px 0;
+  border: none;
+}
+
+/* Failsafes: code & tables */
+.note-text pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.note-text table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.note-text ul,
+.note-text ol {
+  margin: 0 0 24px;
+  padding-left: 40px;
+}
+
+.note-text p + ul,
+.note-text p + ol {
+  margin-top: -10px;
+}
+
+.note-text li {
+  margin-bottom: 8px;
+}
+
+.note-text li > ul,
+.note-text li > ol {
+  margin-bottom: 0;
+}
+
+/* Failsafes: long strings */
+.note-text p,
+.note-text ul,
+.note-text ol,
+.note-text code {
+  overflow-wrap: break-word;
+}
+
+/* In-text links */
+.note-text .text-link,
+.note-text .text-link:visited,
+.note-text .text-link:link {
+  color: var(--link-text);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--link-text-underline);
+  transition: all 0.2s ease;
+}
+
+.note-text .text-link:hover {
+  color: var(--link-text-hover);
+  border-color: var(--link-text-hover);
+}
+
+/* --- Top navigation --- */
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-links {
+  margin-bottom: 68px;
+  font: 18px/1.6 Helvetica, Arial, sans-serif;
+}
+
+.nav-links a {
+  color: var(--link-accent);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  border-bottom: none;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--link-accent-hover);
+  text-decoration-color: var(--link-accent-hover);
+}
+
+.nav-links span {
+  color: var(--fg-separator);
+  margin: 0 4px;
+  visibility: hidden;
+}
+
+.nav-theme-toggle {
+  color: var(--fg-muted);
+  font: 18px/1.6 Helvetica, Arial, sans-serif;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.nav-links .nav-theme-toggle:hover {
+  color: var(--fg-muted);
+  text-decoration-color: currentColor;
+  border-bottom: none;
+}
+
+.font-toggle {
+  color: var(--fg-muted);
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-toggle:hover {
+  border-bottom: 1px solid var(--fg-muted);
+}
+
+.font-toggle::after { content: 'Arial'; }
+:root.sans-serif .font-toggle::after { content: 'Georgia'; }
+
+.nav-font-toggle {
+  color: var(--fg-muted);
+  font: 18px/1.6 Helvetica, Arial, sans-serif;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.nav-links .nav-font-toggle:hover {
+  color: var(--fg-muted);
+  text-decoration-color: currentColor;
+  border-bottom: none;
+}
+
+/* --- Font switching --- */
+
+:root.sans-serif .note-text,
+:root.sans-serif .article-desc,
+:root.sans-serif .note-text blockquote {
+  font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+}
+
+/* --- Breadcrumbs --- */
+
+.breadcrumbs {
+  margin: 0 var(--margin-x) 30px;
+  font: 15px/1.6 Helvetica, Arial, sans-serif;
+  color: var(--fg-muted);
+}
+
+.breadcrumbs a {
+  color: var(--link-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--link-accent-underline-thin);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  border-bottom: none;
+  transition: all 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+  color: var(--link-accent-hover);
+  text-decoration-color: var(--link-accent-hover);
+}
+
+.breadcrumbs span {
+  color: var(--fg-muted);
+  margin: 0 4px;
+}
+
+.breadcrumbs .breadcrumb-current,
+.breadcrumbs .breadcrumb-current:visited,
+.breadcrumbs .breadcrumb-current:link {
+  color: var(--fg-muted);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.breadcrumbs .breadcrumb-current:hover {
+  color: var(--fg-muted);
+  border-bottom: 1px solid var(--fg-muted);
+}
+
+/* --- Footer --- */
+
+.footer {
+  margin: 0 var(--margin-x) 40px;
+  padding-top: 24px;
+  font: 15px/1.6 Helvetica, Arial, sans-serif;
+  color: var(--fg-muted);
+}
+
+.footer a {
+  color: var(--fg-muted);
+  text-decoration: none;
+  border-bottom: none;
+  transition: all 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--fg-muted);
+  border-bottom: 1px solid var(--fg-muted);
+}
+
+.footer-sep {
+  color: var(--fg-separator);
+  margin: 0 4px;
+}
+
+.theme-toggle {
+  color: var(--fg-muted);
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle:hover {
+  border-bottom: 1px solid var(--fg-muted);
+}
+
+.theme-toggle::after { content: 'Тёмная тема'; }
+:root.dark .theme-toggle::after { content: 'Светлая тема'; }
+
+.theme-toggle-mobile {
+  display: none;
+}
+
+/* --- Links sections (Ilyahov-style) --- */
+
+.links {
+  margin: 0 var(--margin-x) 40px;
+  font: 18px/1.6 Helvetica, Arial, sans-serif;
+  color: var(--fg);
+}
+
+.links-section {
+  margin-bottom: 32px;
+}
+
+.links-section h2 {
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  color: var(--fg-strong);
+}
+
+.links-section h2:first-child {
+  margin-top: 0;
+}
+
+.links-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-section li {
+  margin-bottom: 8px;
+}
+
+.links-section a {
+  color: var(--link-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--link-accent-underline);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  border-bottom: none;
+  transition: all 0.2s ease;
+}
+
+.links-section a:hover {
+  color: var(--link-accent-hover);
+  text-decoration: underline;
+  text-decoration-color: var(--link-accent-hover);
+}
+
+.links-section .link-note {
+  color: var(--fg-secondary);
+  font-size: 15px;
+}
+
+/* --- Responsive: mobile --- */
+
+@media screen and (max-width: 1023px) {
+  .header { margin: 16px var(--margin-x-compact) 0; padding: 16px 0 32px; }
+  .content { margin: 0 var(--margin-x-compact) 60px; }
+  .links { margin: 0 var(--margin-x-compact) 40px; }
+  .breadcrumbs { margin: 0 var(--margin-x-compact) 30px; }
+  .footer { margin: 0 var(--margin-x-compact) 40px; text-align: center; }
+  .footer a, .footer .footer-sep, .footer .theme-toggle:not(.theme-toggle-mobile) { display: none; }
+  .footer .theme-toggle-mobile {
+    display: block;
+    margin: 0 auto 12px;
+    min-height: 44px;
+    line-height: 44px;
+  }
+  .footer-info { display: block; }
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--fg);
+    font: bold 28px/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 8px 0;
+    min-height: 44px;
+    cursor: pointer;
+    margin-bottom: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-links { display: none; margin-bottom: 0; }
+  .nav.open .nav-links {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  .nav.open .nav-links span { display: none; }
+  .nav.open .nav-links .nav-theme-toggle { display: none; }
+  .nav.open .nav-links .nav-font-toggle { display: none; }
+  .nav.open .nav-links a {
+    display: block;
+    padding: 20px 0;
+    font: bold 28px/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    border-top: none;
+  }
+  .nav.open .nav-links a:first-child {
+    border-top: 1px solid var(--rule);
+  }
+  .nav { margin-bottom: 32px; }
+  .nav-links span { margin: 0 2px; }
+  .article-title { font-size: 30px; }
+  .note-title { font-size: 24px; }
+  .note-text blockquote {
+    padding-left: 16px;
+    border-left: 2px solid var(--rule);
+  }
+}
+
+/* --- Print --- */
+
+@media print {
+  :root.dark {
+    color-scheme: light !important;
+    --bg: #fff;
+    --fg: #000;
+    --fg-strong: #111;
+    --fg-muted: #555;
+    --fg-secondary: #666;
+    --link: #0060a0;
+    --link-text: #003366;
+  }
+  body { background: #fff !important; }
+  .header nav, .nav-toggle, .links, .breadcrumbs, .footer { display: none !important; }
+  .content { display: block; margin: 0; }
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <div class="header">
+    <nav class="nav" aria-label="Основная навигация">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Меню</button>
+      <div class="nav-links">
+        <a href="#">Главная страница</a> <span aria-hidden="true">·</span>
+        <a href="#">Разделы</a> <span aria-hidden="true">·</span>
+        <a href="#">Вики</a> <span aria-hidden="true">·</span>
+        <a href="#">Книги</a> <span aria-hidden="true">·</span>
+        <a href="#">Каталог</a> <span aria-hidden="true">·</span>
+        <a href="#">English</a> <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav"></button> <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav"></button>
+      </div>
+    </nav>
+    <h1 class="article-title">Евгений Степанищев</h1>
+    <div class="article-desc">
+      <p>Этот сайт&nbsp;— моя персональная записная книжка. Интересны мне, по&nbsp;большей части, программирование, история и&nbsp;события из&nbsp;моей жизни.</p>
+    </div>
+  </div>
+
+  <main>
+  <div class="content">
+    <article class="note">
+      <h2 class="note-title">День-олень</h2>
+      <div class="note-text">
+        <p>Сегодня воскресенье, и&nbsp;почти прошедшие выходные можно охарактеризовать словами моего бывшего коллеги и&nbsp;друга А.&nbsp;П.&nbsp;— «день-олень», если я&nbsp;правильно понимаю, что он под&nbsp;этим подразумевал.</p>
+        <p>Вчера меня разбудили около пяти утра, и&nbsp;после этого я&nbsp;так и&nbsp;не&nbsp;смог заснуть, что, видимо, вместе с&nbsp;нервным напряжением недели задало какой-то не&nbsp;тот настрой всем выходным.</p>
+        <p>Сегодня ночью я&nbsp;тоже спал не&nbsp;очень хорошо; снился сон на&nbsp;английском. Это не&nbsp;тот сон, где я&nbsp;великолепно говорю по-английски&nbsp;— такой мне, <a href="#" class="text-link">насколько я&nbsp;помню</a>, не&nbsp;снился ни&nbsp;разу,&nbsp;— а&nbsp;тот, где мой английский именно такого уровня, как и&nbsp;в&nbsp;жизни: в&nbsp;принципе, я&nbsp;могу сказать всё, что хочу, но&nbsp;слова подбираю медленно и&nbsp;путаю времена.</p>
+        <p>Второй день чувствую себя разбитым и&nbsp;как-то не&nbsp;нахожу себе ни&nbsp;места, ни&nbsp;занятия. Одновременно ничего не&nbsp;хочется, но&nbsp;при&nbsp;этом хочется чем-то себя занять&nbsp;— и&nbsp;всё это на&nbsp;фоне какого-то упадка сил.</p>
+        <blockquote>Бывают дни, когда опустишь руки, и&nbsp;нет ни&nbsp;слов, ни&nbsp;музыки, ни&nbsp;сил.
+          <footer class="quote-source">— Иосиф Бродский, <cite>«Письма римскому другу»</cite></footer>
+        </blockquote>
+        <p>Человеческой части семьи дома нет&nbsp;— жена и&nbsp;дочка уехали на&nbsp;курсы рисования, куда ходят вместе, так что сычую с&nbsp;собакой и&nbsp;котом. Ну&nbsp;и&nbsp;с&nbsp;улитками, но&nbsp;они обычно почти никак себя не&nbsp;проявляют, разве что запахом.</p>
+        <p>Последние несколько часов решил занять себя просмотром разбора сюжета сериала «Секретные материалы». Когда-то мы с&nbsp;родителями очень любили его смотреть, доставали буквально по&nbsp;серии на&nbsp;видеокассетах. Я&nbsp;так его и&nbsp;не&nbsp;досмотрел: он очень длинный, и&nbsp;полностью посмотреть его именно на&nbsp;этом носителе было&nbsp;бы сложно. Но&nbsp;в&nbsp;душу он мне запал, и&nbsp;разобраться в&nbsp;его основной линии&nbsp;— занятие не&nbsp;хуже прочих.</p>
+        <p>Надеюсь завтра буду в&nbsp;норме.</p>
+        <p>Что помогает в&nbsp;такие дни:</p>
+        <ul>
+          <li>Прогулка с&nbsp;собакой</li>
+          <li>Горячий чай с&nbsp;лимоном</li>
+          <li>Хороший сериал или разбор сюжета</li>
+          <li>Просто лечь и&nbsp;ничего не&nbsp;делать</li>
+        </ul>
+        <p>А&nbsp;вот план на&nbsp;завтра:</p>
+        <ol>
+          <li>Выспаться как следует</li>
+          <li>Разобрать почту за&nbsp;выходные</li>
+          <li>Написать пост в&nbsp;блог</li>
+          <li>Погулять подольше</li>
+        </ol>
+      </div>
+    </article>
+  </div>
+
+  <div class="links">
+    <div class="links-section">
+      <h2>Начинающим редакторам</h2>
+      <ul>
+        <li><a href="#">Руководство для начинающих редакторов</a> <span class="link-note">— переиздание 2025 года</span></li>
+        <li><a href="#">Книга о редактуре «Пиши, сокращай»</a></li>
+        <li><a href="#">Бесплатный видеокурс о тексте</a></li>
+        <li><a href="#">Школа редакторов</a></li>
+        <li><a href="#">Электронный учебник редактуры</a></li>
+        <li><a href="#">Набор карточек «Простые правила сильного текста»</a></li>
+        <li><a href="#">Советы и статьи о редактуре</a></li>
+      </ul>
+    </div>
+
+    <div class="links-section">
+      <h2>Организациям</h2>
+      <ul>
+        <li><a href="#">Книга «Текст по полочкам»: краткое пособие по деловой переписке для сотрудников</a></li>
+        <li><a href="#">Видеокурс для сотрудников</a></li>
+        <li><a href="#">Бесплатный видеокурс «Как победить канцелярит»</a></li>
+        <li><a href="#">Заказать тренинг, мастер-класс, лекцию</a></li>
+      </ul>
+    </div>
+
+    <div class="links-section">
+      <h2>Профессионалам</h2>
+      <ul>
+        <li><a href="#">Платный блог с редакторскими находками, кейсами и разборами</a></li>
+        <li><a href="#">Сервис проверки текста «Главред»</a></li>
+      </ul>
+    </div>
+  </div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="#">Главная</a> <span aria-hidden="true">/</span> <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Статья</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">·</span> <a href="#">Telegram</a> <span class="footer-sep" aria-hidden="true">·</span> <a href="#">YouTube</a> <span class="footer-sep" aria-hidden="true">·</span> <a href="#">English</a> <span class="footer-sep" aria-hidden="true">·</span> <a href="#">Languages</a> <span class="footer-sep" aria-hidden="true">·</span> <button type="button" class="theme-toggle" id="theme-toggle"></button>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('theme-toggle');
+  var btnMobile = document.getElementById('theme-toggle-mobile');
+  var root = document.documentElement;
+
+  function toggleTheme() {
+    root.classList.add('no-transitions');
+    root.classList.toggle('dark');
+    var dark = root.classList.contains('dark');
+    try {
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    } catch(e) {}
+    var meta = document.getElementById('theme-color');
+    if (meta) meta.content = dark ? 'rgb(32, 32, 32)' : '#fff';
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        root.classList.remove('no-transitions');
+      });
+    });
+  }
+
+  if (btn) btn.addEventListener('click', toggleTheme);
+  if (btnMobile) btnMobile.addEventListener('click', toggleTheme);
+  var btnNav = document.getElementById('theme-toggle-nav');
+  if (btnNav) btnNav.addEventListener('click', toggleTheme);
+
+  // Font toggle
+  var fontNav = document.getElementById('font-toggle-nav');
+
+  function toggleFont() {
+    root.classList.toggle('sans-serif');
+    var isSans = root.classList.contains('sans-serif');
+    try {
+      localStorage.setItem('font', isSans ? 'sans-serif' : 'serif');
+    } catch(e) {}
+  }
+
+  if (fontNav) fontNav.addEventListener('click', toggleFont);
+
+  var navToggle = document.getElementById('nav-toggle');
+  if (navToggle) {
+    navToggle.addEventListener('click', function() {
+      var isOpen = this.parentElement.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+  }
+
+  var btnTop = document.getElementById('scroll-to-top');
+  if (btnTop) {
+    btnTop.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      var target = document.getElementById('top');
+      if (target) target.focus({ preventScroll: true });
+    });
+  }
+})();
+</script>
+</body>
+</html>

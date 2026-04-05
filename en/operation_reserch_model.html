@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Operations Research Models</title>
+<meta name="description" content="Constructing an operation model is the key stage of operations research. The operation is simplified and schematized, and essential factors are identified. The standard model and classification of problems are described.">
+<meta name="keywords" content="Modeling,model,operations research,objective function,programming,problems,effectiveness,optimal,mathematical,systems,analysis,solution">
+<link rel="canonical" href="https://systems-analysis.ru/en/operation_reserch_model.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/operation_reserch_model.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/operation_reserch_model.html">
+<meta property="og:title" content="Operations Research Models">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/en/operation_reserch_model.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="Constructing an operation model is the key stage of operations research. The operation is simplified and schematized, and essential factors are identified. The standard model and classification of problems are described.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="en_US">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="../js/theme-init.js"></script>
+<link rel="stylesheet" href="../css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/en/operation_reserch_model.html#article",
+    "headline": "Operations Research Models",
+    "description": "Constructing an operation model is the key stage of operations research. The operation is simplified and schematized, and essential factors are identified. The standard model and classification of problems are described.",
+    "url": "https://systems-analysis.ru/en/operation_reserch_model.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "en",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/en/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/en/operation_reserch_model.html"
+    },
+    "keywords": [
+        "Modeling",
+        "model",
+        "operations research",
+        "objective function",
+        "programming",
+        "problems",
+        "effectiveness",
+        "optimal",
+        "mathematical",
+        "systems",
+        "analysis",
+        "solution"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01",
+    "about": {
+        "@type": "DefinedTerm",
+        "name": "Operation Model",
+        "description": "A sufficiently precise mathematical description of an operation expressed through functions, equations, systems of equations, and inequalities.",
+        "sameAs": [
+            "https://systems-analysis.ru/wiki/Модели_исследования_операций",
+            "https://systems-analysis.ru/eng/Operations_research_models"
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://systems-analysis.ru/en/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Operations Research",
+            "item": "https://systems-analysis.ru/en/operation_reserch.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Operations Research Models"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Main navigation">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Menu</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/en/">Home</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/sections.html">Sections</a>
+        <span aria-hidden="true">·</span>
+        <a href="/eng/">Wiki</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/books.html">Books</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/catalog.html">Catalog</a>
+        <span aria-hidden="true">·</span>
+        <a href="/operation_reserch_model.html">Russian</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Toggle theme"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Toggle font"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Operations Research Models</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p>To apply quantitative research methods, it is necessary to construct a mathematical model of the operation. When building a model, the operation is typically simplified and schematized, and the resulting schema is described using mathematical tools. A model of an operation is a sufficiently precise mathematical description of the operation expressed through functions, equations, systems of equations, and inequalities. The effectiveness of an operation is the degree to which it achieves its objective.</p>
+
+<h2>General Formulation of the Operations Research Problem</h2>
+
+<p>In operations research, a management situation encompasses goals and decisions. Decisions are made to achieve a goal. The management situation is described by a model. The model contains a measure of effectiveness, by which it is determined how close a decision is to the goal. The measure of effectiveness depends on the factors that influence the operation. All factors included in the description of an operation can be divided into two groups: constant factors that cannot be influenced, and controllable factors.</p>
+
+<p>The conceptual elements of the model are represented as a "black box," where the primary focus is on defining inputs and outputs. Inputs are what the model processes; outputs are what the model produces. Controllable and uncontrollable variables are supplied as inputs. The output is the effectiveness criterion. The model contains an explicit measure of effectiveness, by which it is determined how close a decision is to the goal. When constructing a model, it is important to specify how the input parameters will affect the stated measure.</p>
+
+<p>The effectiveness criterion, expressed by a certain function called the objective function, depends on factors of both groups. The mathematical expression of the effectiveness criterion is called the objective function. The objective function is a mathematically formulated (formalized) measure of effectiveness that needs to be maximized or minimized.</p>
+
+<p>Controllable variables are those parameters that are managed by the decision-maker.</p>
+
+<p>Uncontrollable variables are external factors that the manager cannot control, but which are essential for achieving the goals.</p>
+
+<p>The effectiveness criterion, or objective function, is a function of the decision variables that expresses the degree of approximation to the goal.</p>
+
+<p>Definition of a mathematical model: a mathematical model is understood as any operator that, given corresponding values of input parameters, establishes the output values of the parameters of the object being modeled within the set of admissible values of input and output parameters for the modeled object.</p>
+
+<h2>Operations Research Models and Decision-Making</h2>
+
+<p>Operations research is oriented toward the quantitative justification of rational decision-making. Such models closely intersect with a large class of problems in decision theory and optimization problems.</p>
+
+<p>When developing an operations research model, it is necessary to answer the following questions:</p>
+<ul>
+<li>what, in the specific case, should be considered alternative solutions?</li>
+<li>by what criterion are alternative solutions selected?</li>
+<li>what constraints must the feasible solutions satisfy?</li>
+</ul>
+
+<p>The standard mathematical model of operations research is presented in the following formulation: maximization or minimization of the objective function, subject to the fulfillment of constraints.</p>
+
+<p>When choosing a solution, one that maximizes or minimizes the objective function is preferred. Examples of maximizing the objective function include profit and productivity. Minimizing the objective function may pertain to costs, expenditures, time, and so forth. The choice of the effectiveness criterion is the central, most critical moment of the study. It is far better to find a non-optimal solution to a correctly chosen criterion than an optimal solution to an incorrectly chosen criterion.</p>
+
+<p>A feasible solution is one that satisfies all the constraints of the model. There may be an infinite number of feasible solutions.</p>
+
+<p>An optimal solution is one that, in addition to being feasible, causes the objective function to reach its maximum or minimum value.</p>
+
+<p>Solutions are called optimal if, by one attribute or another, they are preferable to others. Every choice of the best alternative is specific, since it is based on conformity to established criteria. When speaking of an optimal alternative, one specifies these criteria ("optimal with respect to…"). What is optimal under one criterion is not necessarily so under another.</p>
+
+<p>A constraint is a mathematical expression in the form of an inequality or equality that the variables of the model must satisfy.</p>
+
+<p>Constraints narrow the set of feasible solutions. In some cases, there may be no optimal solution at all given the stated constraints. This means that the quality of the final decision, made on the basis of solving the problem, depends on how adequately the model represents the real situation that it formally describes through constraints. Constraints include quotas, vehicle load capacity, planned task volume, weight characteristics of equipment, resource limitations, and so forth.</p>
+
+<p>When the configuration of constraints changes, a different solution may become the best. In the real world, constraints may have a physical, economic, or political nature and are not necessarily amenable to formalization. A specific solution will be the best only for the given model, subject to the established system of constraints. The more accurately the model reflects the situation, the closer the solution of the problem is to the optimal one.</p>
+
+<h2>Classification of Operations Research Models</h2>
+
+<p>All operations research models can be classified depending on the nature and properties of the operation, the character of the problems being solved, and the mathematical methods employed:</p>
+<ul>
+<li>If the effectiveness criterion is a linear function and the functions in the system of constraints are also linear, then the problem is a linear programming problem.</li>
+<li>If, based on its substantive meaning, its solutions must be integers, then it is an integer linear programming problem.</li>
+<li>If the effectiveness criterion and/or the system of constraints are specified by nonlinear functions, then we have a nonlinear programming problem. In particular, if the stated functions possess convexity properties, the resulting problem is a convex programming problem.</li>
+<li>If a mathematical programming problem includes a time variable and the effectiveness criterion is expressed not explicitly as a function of the variables, but indirectly — through equations describing the progression of operations over time, then the problem is a dynamic programming problem.</li>
+<li>If finding the exact optimum algorithmically is impossible due to an excessively large number of solution variants, then heuristic programming methods are employed, which make it possible to significantly reduce the number of variants examined and find, if not the optimal, then a sufficiently good solution that is satisfactory from a practical standpoint.</li>
+</ul>
+
+<p>By their substantive formulation, a multitude of other typical operations research problems can be divided into several classes:</p>
+<ul>
+<li>Project scheduling problems (PERT/CPM) examine the relationships between the completion dates of a large complex of operations (tasks) and the start times of all operations in the complex. These problems consist of finding the minimum durations of the complex of operations and the optimal relationship between costs and completion times.</li>
+<li>Queuing problems are devoted to the study and analysis of service systems with queues of requests or demands, and consist of determining the performance measures of the systems and their optimal characteristics — for example, determining the number of service channels, service time, and the like.</li>
+<li>Inventory management problems consist of finding the optimal values of the inventory level (reorder point) and order size. The distinguishing feature of such problems is that as the inventory level increases, on the one hand, storage costs increase, but on the other hand, losses due to possible shortages of the stored product decrease.</li>
+<li>Resource allocation problems arise when there is a certain set of operations (tasks) that must be performed with limited available resources, and it is necessary to find the optimal allocation of resources among operations or the optimal composition of operations.</li>
+<li>Maintenance and replacement problems are relevant in connection with the wear and aging of equipment and the need for its replacement.</li>
+<li>Among operations research models, models for making optimal decisions in conflict situations, studied by game theory, are singled out in particular. Conflict situations, in which the interests of two (or more) parties pursuing different goals collide, include a number of situations in the areas of economics, law, military affairs, and the like. In game theory problems, it is necessary to develop recommendations for the rational behavior of conflict participants and to determine their optimal strategies.</li>
+</ul>
+
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <div class="links">
+    <div class="links-section">
+      <h2>Operations Research</h2>
+      <ul>
+        <li><a href="/en/operation_reserch_caa.html">Operations Research: Churchman, Ackoff, and Arnoff</a></li>
+        <li><a href="/en/operation_reserch_as.html">Fundamentals of Operations Research: Ackoff and Sasieni</a></li>
+        <li><a href="/en/operation_reserch_me.html">Operations Research: Moder and Elmaghraby</a></li>
+        <li><a href="/en/operation_reserch_vg.html">Operations Research: Wagner</a></li>
+        <li><a href="/en/operation_reserch_gv.html">Operations Research: Gvishiani</a></li>
+        <li><a href="/en/operation_reserch_ve.html">Operations Research: Wentzel</a></li>
+        <li><a href="/en/methodology_or.html">Operations Research Methodology</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumbs">
+    <a href="/en/">Home</a> <span aria-hidden="true">/</span>
+    <a href="/en/operation_reserch.html">Operations Research</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Operations Research Models</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Toggle theme"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_en">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/operation_reserch_model.html">Russian</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+  </footer>
+
+</div>
+
+<script src="../js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+</body>
+</html>

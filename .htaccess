@@ -1,0 +1,13 @@
+# UTF-8 по умолчанию
+AddDefaultCharset utf-8
+
+# Markdown-файлы
+AddCharset utf-8 .md
+AddType text/plain;charset=utf-8 .md
+
+# HTML
+AddCharset utf-8 .html
+
+# CSS / JS
+AddCharset utf-8 .css
+AddCharset utf-8 .js
