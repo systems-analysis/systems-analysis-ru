@@ -1,3 +1,30 @@
+# 301 redirects: operation_reserch -> operation_research
+RewriteEngine On
+
+RewriteRule ^operation_reserch\.html$ /operation_research.html [R=301,L]
+RewriteRule ^operation_reserch_as\.html$ /operation_research_as.html [R=301,L]
+RewriteRule ^operation_reserch_book\.html$ /operation_research_book.html [R=301,L]
+RewriteRule ^operation_reserch_caa\.html$ /operation_research_caa.html [R=301,L]
+RewriteRule ^operation_reserch_gv\.html$ /operation_research_gv.html [R=301,L]
+RewriteRule ^operation_reserch_me\.html$ /operation_research_me.html [R=301,L]
+RewriteRule ^operation_reserch_model\.html$ /operation_research_model.html [R=301,L]
+RewriteRule ^operation_reserch_ve\.html$ /operation_research_ve.html [R=301,L]
+RewriteRule ^operation_reserch_vg\.html$ /operation_research_vg.html [R=301,L]
+
+RewriteRule ^en/operation_reserch\.html$ /en/operation_research.html [R=301,L]
+RewriteRule ^en/operation_reserch_as\.html$ /en/operation_research_as.html [R=301,L]
+RewriteRule ^en/operation_reserch_book\.html$ /en/operation_research_book.html [R=301,L]
+RewriteRule ^en/operation_reserch_caa\.html$ /en/operation_research_caa.html [R=301,L]
+RewriteRule ^en/operation_reserch_gv\.html$ /en/operation_research_gv.html [R=301,L]
+RewriteRule ^en/operation_reserch_me\.html$ /en/operation_research_me.html [R=301,L]
+RewriteRule ^en/operation_reserch_model\.html$ /en/operation_research_model.html [R=301,L]
+RewriteRule ^en/operation_reserch_ve\.html$ /en/operation_research_ve.html [R=301,L]
+RewriteRule ^en/operation_reserch_vg\.html$ /en/operation_research_vg.html [R=301,L]
+
+# 301 redirects: specification -> requirements
+RewriteRule ^specification\.html$ /requirements.html [R=301,L]
+RewriteRule ^en/specification\.html$ /en/requirements.html [R=301,L]
+
 # UTF-8 по умолчанию
 AddDefaultCharset utf-8
 
