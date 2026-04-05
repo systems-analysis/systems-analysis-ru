@@ -441,6 +441,14 @@ button:focus-visible {
   content: "Светлая тема";
 }
 
+:root:lang(en) .theme-toggle::after {
+  content: "Dark theme";
+}
+
+:root:lang(en).dark .theme-toggle::after {
+  content: "Light theme";
+}
+
 .theme-toggle-mobile {
   display: none;
 }
