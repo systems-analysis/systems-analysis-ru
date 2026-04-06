@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -c \"gtag\\(''''config'''', ''''G-ZCD8C8FNSL''''\\)\" *.html en/*.html)",
+      "Bash(grep -v \":0$\")"
+    ]
+  }
+}
