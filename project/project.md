@@ -935,3 +935,220 @@ Get-ChildItem operation_research*.html, en\operation_research*.html | Select-Obj
 
 - ссылки `/wiki/` и `/eng/` не подтверждены по содержимому текущего репозитория, потому что соответствующие разделы отсутствуют в рабочем дереве;
 - это не было засчитано как дефект меню проекта, но требует отдельной проверки в целевой публикации, если эти маршруты должны обслуживаться тем же сайтом.
+
+## Рекомендация: отдельный стиль ссылок для sitemap
+
+Изучены [map.html](D:/Github/systems-analysis-ru/map.html), [en/map.html](D:/Github/systems-analysis-ru/en/map.html) и текущие стили ссылок в [css/styles.css](D:/Github/systems-analysis-ru/css/styles.css).
+
+### Что есть сейчас
+
+- тело sitemap на обеих страницах строится через один список:
+  - [map.html:99](D:/Github/systems-analysis-ru/map.html#L99)
+  - [en/map.html:100](D:/Github/systems-analysis-ru/en/map.html#L100)
+- внешний вид ссылок дерева сейчас задаётся общим блоком:
+  - [css/styles.css:568](D:/Github/systems-analysis-ru/css/styles.css#L568)
+  - [css/styles.css:574](D:/Github/systems-analysis-ru/css/styles.css#L574)
+- верхнее меню использует другой визуальный шаблон ссылок:
+  - [css/styles.css:278](D:/Github/systems-analysis-ru/css/styles.css#L278)
+  - [css/styles.css:288](D:/Github/systems-analysis-ru/css/styles.css#L288)
+
+### Основная идея решения
+
+Рекомендую не переиспользовать напрямую `.nav-links a` и не менять глобально `.site-tree a`.
+
+Наиболее безопасный вариант:
+
+- оставить `.site-tree` только как структурный класс дерева:
+  - вложенность;
+  - отступы;
+  - соединительные линии;
+  - служебные акценты вроде `.tree-note`;
+- добавить для sitemap отдельный визуальный класс ссылок, например:
+  - `site-tree-menu-links`
+- привязать его только к двум страницам sitemap.
+
+### Рекомендуемая реализация
+
+1. На обеих страницах sitemap добавить отдельный page-scope, например:
+
+- `<body class="page-sitemap">`
+
+или, если не хочется трогать `body`, то отдельный класс на сам список:
+
+- `<ul class="site-tree site-tree-menu-links">`
+
+2. В CSS завести новый изолированный блок только для этой задачи, например:
+
+- `.page-sitemap .site-tree-menu-links`
+- `.page-sitemap .site-tree-menu-links a`
+- `.page-sitemap .site-tree-menu-links a:hover`
+- `.page-sitemap .site-tree-menu-links .tree-section`
+
+3. Для нового класса повторить именно визуальные свойства верхнего меню, а не его layout-логику:
+
+- цвет `var(--link-accent)`
+- hover `var(--link-accent-hover)`
+- `text-decoration: underline`
+- `text-decoration-color: currentColor`
+- `text-underline-offset: 4px`
+- `text-decoration-thickness: 1px`
+- `border-bottom: none`
+- `transition: all 0.2s ease`
+- шрифт уровня верхнего меню:
+  - `font: 18px/1.6 Helvetica, Arial, sans-serif`
+
+### Почему не стоит просто навесить `.nav-links`
+
+- `.nav-links` отвечает не только за внешний вид ссылок, но и за поведение шапки;
+- у него есть связанная мобильная логика и специальные правила для открытого меню;
+- прямое переиспользование повысит связанность sitemap с header-компонентом;
+- любое будущее изменение верхнего меню может случайно сломать карту сайта.
+
+### Что рекомендую считать “отдельно управляемым стилем”
+
+Оптимальная архитектура:
+
+- `.site-tree` = структура дерева;
+- `.site-tree-menu-links` = только внешний вид ссылок на страницах sitemap;
+- `.page-sitemap` = page-scope, который гарантирует, что стиль не “утечёт” на другие страницы.
+
+Это даст возможность:
+
+- отдельно менять внешний вид sitemap без влияния на header;
+- отдельно менять header без влияния на sitemap;
+- при желании позже использовать `.site-tree` и на других страницах с другим визуальным оформлением.
+
+### Важная деталь про `tree-section`
+
+Сейчас верхние узлы дерева выделены жирностью:
+
+- [css/styles.css:578](D:/Github/systems-analysis-ru/css/styles.css#L578)
+
+Если нужна буквальная визуальная идентичность с верхним меню, то для sitemap-стиля лучше сбросить:
+
+- `font-weight: 400`
+
+Если же нужно сохранить дополнительный акцент верхнего уровня дерева, можно оставить `600`, но это уже будет сознательное отличие от меню.
+
+Рекомендация по умолчанию:
+
+- для точного совпадения с верхним меню убрать дополнительную жирность у `.tree-section`.
+
+### Сопутствующее замечание
+
+В текущем дереве соединительные линии используют `var(--border)`:
+
+- [css/styles.css:542](D:/Github/systems-analysis-ru/css/styles.css#L542)
+- [css/styles.css:552](D:/Github/systems-analysis-ru/css/styles.css#L552)
+
+Эта переменная в корневых токенах не объявлена. Если разработчик будет трогать блок sitemap, заодно безопасно заменить её на существующий токен, например `var(--rule)`, либо ввести отдельную переменную уровня sitemap.
+
+### Критерии приемки для реализации
+
+- на [map.html](D:/Github/systems-analysis-ru/map.html) и [en/map.html](D:/Github/systems-analysis-ru/en/map.html) ссылки дерева визуально совпадают с верхним меню;
+- стиль применяется только к телу sitemap и не влияет на обычные текстовые ссылки статьи;
+- header-меню и footer не меняют поведение и внешний вид;
+- новый стиль управляется отдельным селектором, а не через прямое переиспользование `.nav-links`;
+- структура дерева `.site-tree` остаётся рабочей;
+- при переключении темы новый стиль корректно выглядит и в светлой, и в тёмной схеме.
+
+## Приемочная проверка: отдельный стиль ссылок для sitemap
+
+Проверена реализация отдельного стиля ссылок для [map.html](D:/Github/systems-analysis-ru/map.html) и [en/map.html](D:/Github/systems-analysis-ru/en/map.html).
+
+### Итог
+
+- решение частично корректное;
+- изоляция и управляемость реализованы хорошо;
+- но требование “внешне такими же как в главном меню” выполнено не полностью;
+- задачу в текущем виде не рекомендую принимать как полностью завершённую.
+
+### Что сделано правильно
+
+- на обеих sitemap-страницах добавлен отдельный локальный контейнер:
+  - [map.html:96](D:/Github/systems-analysis-ru/map.html#L96)
+  - [en/map.html:97](D:/Github/systems-analysis-ru/en/map.html#L97)
+- в [css/styles.css](D:/Github/systems-analysis-ru/css/styles.css) добавлен отдельный, независимо управляемый блок:
+  - [css/styles.css:589](D:/Github/systems-analysis-ru/css/styles.css#L589)
+  - [css/styles.css:599](D:/Github/systems-analysis-ru/css/styles.css#L599)
+  - [css/styles.css:604](D:/Github/systems-analysis-ru/css/styles.css#L604)
+- класс `sitemap-body` используется только на двух целевых страницах и не “утекает” в другие HTML;
+- общий header не переиспользован напрямую, то есть связанность с `.nav-links` не появилась.
+
+### Найденные замечания
+
+- визуальное совпадение с верхним меню не полное, потому что новый стиль копирует только оформление ссылки, но не копирует шрифт меню;
+- верхнее меню задаёт шрифт через контейнер [css/styles.css:273](D:/Github/systems-analysis-ru/css/styles.css#L273), [css/styles.css:275](D:/Github/systems-analysis-ru/css/styles.css#L275);
+- sitemap сейчас остаётся внутри [css/styles.css:169](D:/Github/systems-analysis-ru/css/styles.css#L169), где действует `18px/1.6 Georgia, "Times New Roman", Times, serif`, то есть ссылки визуально будут в serif, а не как в верхнем меню;
+- дополнительно остаётся усиление верхних узлов дерева:
+  - [css/styles.css:578](D:/Github/systems-analysis-ru/css/styles.css#L578)
+- это тоже отличает sitemap от обычных ссылок верхнего меню, где такой жирности нет.
+
+### Что это означает на практике
+
+- отдельный стиль действительно появился;
+- он действительно ограничен страницами sitemap;
+- но сейчас это “похожий” стиль ссылок, а не точное визуальное соответствие верхнему меню.
+
+### Рекомендация для доведения до конца
+
+Чтобы задача считалась выполненной полностью, рекомендую добавить ещё два шага:
+
+- задать для sitemap-контейнера или самого дерева тот же шрифт, что у верхнего меню:
+  - `font: 18px/1.6 Helvetica, Arial, sans-serif`
+- убрать дополнительную жирность у `.tree-section`, если нужно буквальное совпадение с меню:
+  - `font-weight: 400`
+
+Оптимально это сделать тоже в отдельном sitemap-scoped блоке, например:
+
+- `.sitemap-body .site-tree`
+- `.sitemap-body .tree-section`
+
+### Сопутствующий риск
+
+- в блоке дерева по-прежнему используются линии на `var(--border)`:
+  - [css/styles.css:542](D:/Github/systems-analysis-ru/css/styles.css#L542)
+  - [css/styles.css:552](D:/Github/systems-analysis-ru/css/styles.css#L552)
+- переменная `--border` в корневых токенах не объявлена, поэтому соединительные линии sitemap могут оставаться неработающими;
+- это замечание не связано напрямую с новым стилем ссылок, но относится к тем же двум страницам.
+
+## Повторная проверка: sitemap-style после доработки
+
+Проверена повторная реализация после исправления замечаний по шрифту и жирности.
+
+### Итог
+
+- блокирующих замечаний по самой задаче больше нет;
+- отдельный стиль ссылок для sitemap реализован корректно;
+- задачу по стилю ссылок sitemap можно принять.
+
+### Что подтверждено
+
+- у [css/styles.css:589](D:/Github/systems-analysis-ru/css/styles.css#L589) появился отдельный контейнерный стиль:
+  - `.sitemap-body { font: 18px/1.6 Helvetica, Arial, sans-serif; }`
+- это совпадает со шрифтовым контрактом верхнего меню:
+  - [css/styles.css:275](D:/Github/systems-analysis-ru/css/styles.css#L275)
+- у [css/styles.css:613](D:/Github/systems-analysis-ru/css/styles.css#L613) добавлен точечный сброс жирности:
+  - `.sitemap-body .tree-section { font-weight: normal; }`
+- `sitemap-body` по-прежнему используется только на двух целевых страницах:
+  - [map.html:96](D:/Github/systems-analysis-ru/map.html#L96)
+  - [en/map.html:97](D:/Github/systems-analysis-ru/en/map.html#L97)
+- распространения на другие HTML-страницы не найдено.
+
+### Вывод
+
+- теперь у sitemap совпадают с верхним меню:
+  - шрифт;
+  - размер;
+  - цвет;
+  - подчеркивание;
+  - hover-поведение;
+  - отсутствие акцентной жирности у верхнего уровня дерева.
+- стиль остаётся отдельно управляемым и изолированным только для тела sitemap.
+
+### Остаточное замечание вне рамок задачи
+
+- ранее отмеченная проблема с `var(--border)` в линиях дерева остаётся актуальной:
+  - [css/styles.css:542](D:/Github/systems-analysis-ru/css/styles.css#L542)
+  - [css/styles.css:552](D:/Github/systems-analysis-ru/css/styles.css#L552)
+- это не мешает принять задачу именно по стилю ссылок, но соединительные линии дерева всё ещё требуют отдельного исправления.

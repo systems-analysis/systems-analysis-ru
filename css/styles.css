@@ -584,6 +584,36 @@ button:focus-visible {
   font-size: 15px;
 }
 
+/* --- Sitemap body links (nav-style, independently managed) --- */
+
+.sitemap-body {
+  font: 18px/1.6 Helvetica, Arial, sans-serif;
+}
+
+.sitemap-body a {
+  color: var(--link-accent);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  border-bottom: none;
+  transition: all 0.2s ease;
+}
+
+.sitemap-body a:visited {
+  color: var(--link-accent);
+  text-decoration-color: currentColor;
+}
+
+.sitemap-body a:hover {
+  color: var(--link-accent-hover);
+  text-decoration-color: var(--link-accent-hover);
+}
+
+.sitemap-body .tree-section {
+  font-weight: normal;
+}
+
 @media screen and (max-width: 1023px) {
   .header {
     margin: 16px var(--margin-x-compact) 0;
