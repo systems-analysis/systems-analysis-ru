@@ -1,0 +1,39 @@
+# robots.txt for systems-analysis.ru
+
+User-agent: *
+
+Disallow: /*title=Special:
+Disallow: /*title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:
+
+Disallow: /wiki/api.php
+Disallow: /wiki/Special:
+Disallow: /wiki/Special%3A
+Disallow: /wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:
+Disallow: /wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F%3A
+Disallow: /wiki/index.php?title=Special:
+Disallow: /wiki/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:
+
+Disallow: /int/api.php
+Disallow: /int/Special:
+Disallow: /int/Special%3A
+Disallow: /int/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:
+Disallow: /int/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F%3A
+Disallow: /int/index.php?title=Special:
+Disallow: /int/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:
+
+Disallow: /eng/api.php
+Disallow: /eng/Special:
+Disallow: /eng/Special%3A
+Disallow: /eng/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:
+Disallow: /eng/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F%3A
+Disallow: /eng/index.php?title=Special:
+Disallow: /eng/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:
+
+Sitemap: https://systems-analysis.ru/sitemap.xml
+Sitemap: https://systems-analysis.ru/sitemap-general.xml
+Sitemap: https://systems-analysis.ru/wiki/sitemap.xml
+Sitemap: https://systems-analysis.ru/eng/sitemap.xml
+Sitemap: https://systems-analysis.ru/int/sitemap.xml
+Sitemap: https://systems-analysis.ru/publications/sitemap.xml
+Sitemap: https://systems-analysis.ru/sitemap/sitemap.xml
+Sitemap: https://systems-analysis.ru/en/sitemap.xml

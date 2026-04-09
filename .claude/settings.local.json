@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(grep -c \"gtag\\(''''config'''', ''''G-ZCD8C8FNSL''''\\)\" *.html en/*.html)",
-      "Bash(grep -v \":0$\")"
+      "Bash(grep -v \":0$\")",
+      "Bash(node convert-template.js)",
+      "Bash(grep -l '/publications/css/style.css' *.html)",
+      "Bash(grep -rl \"favicon-32x32\\\\|favicon-16x16\" publications/*.html)",
+      "Bash(find publications:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(grep -rl \"en\\\\.systems-analysis\\\\.ru\" publications/*.html)",
+      "Bash(grep -rl \"Systems Analysis \\(EN\\)\" publications/*.html)",
+      "Bash(ls en/*.html)",
+      "Bash(python3:*)"
     ]
   }
 }

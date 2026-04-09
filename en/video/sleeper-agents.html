@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training | Systems Analysis</title>
+<meta content="Video, timeline, key takeaways, and resources on "Sleeper Agents" — training deceptive LLMs that persist through safety training (Anthropic research)." name="description"/>
+<!-- Canonical -->
+<link href="https://systems-analysis.ru/en/video/sleeper-agents.html" rel="canonical"/>
+<!-- Favicon -->
+<link href="/en/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/en/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/en/images/favicon.ico" rel="shortcut icon"/>
+<link href="/en/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="System" name="apple-mobile-web-app-title"/>
+<link href="/en/images/site.webmanifest" rel="manifest"/>
+<!-- OpenGraph -->
+<meta content="video.other" property="og:type"/>
+<meta content="systems-analysis.ru" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training" property="og:title"/>
+<meta content="Video with timeline, summary, and resources on sleeper agents in LLMs (Anthropic research)." property="og:description"/>
+<meta content="https://systems-analysis.ru/en/video/sleeper-agents.html" property="og:url"/>
+<meta content="https://img.youtube.com/vi/h3XpUoBRTak/hqdefault.jpg" property="og:image"/>
+<meta content="Sleeper Agents — video thumbnail" property="og:image:alt"/>
+<meta content="480" property="og:image:width"/>
+<meta content="360" property="og:image:height"/>
+<meta content="https://img.youtube.com/vi/h3XpUoBRTak/maxresdefault.jpg" property="og:image"/>
+<meta content="Sleeper Agents — video thumbnail" property="og:image:alt"/>
+<meta content="1280" property="og:image:width"/>
+<meta content="720" property="og:image:height"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@systems_en" name="twitter:site"/>
+<meta content="@systems_en" name="twitter:creator"/>
+<meta content="Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training" name="twitter:title"/>
+<meta content="Video with timeline, summary, and resources (Anthropic research)." name="twitter:description"/>
+<meta content="https://systems-analysis.ru/en/video/sleeper-agents.html" name="twitter:url"/>
+<meta content="https://img.youtube.com/vi/h3XpUoBRTak/hqdefault.jpg" name="twitter:image"/>
+<meta content="Sleeper Agents — video thumbnail" name="twitter:image:alt"/>
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://systems-analysis.ru/#org",
+      "name": "Системный анализ",
+      "alternateName": "Systems Analysis",
+      "url": "https://systems-analysis.ru/",
+      "description": "Проект о системном анализе, теории систем, исследовании операций, моделировании, оптимизации, управлении рисками и принятии решений; отдельные направления — AI/ИИ, машинное обучение (ML) и большие языковые модели (LLM).",
+      "founder": {
+        "@type": "Person",
+        "name": "Дмитришин Юрий",
+        "alternateName": "Yuriy Dmitrishin",
+        "url": "https://dmitrishin.github.io/"
+      },
+      "sameAs": [
+        "https://www.youtube.com/@systems_analysis",
+        "https://x.com/systems_en",
+        "https://t.me/systems_analysis_en",
+        "https://substack.com/@systemen",
+        "https://medium.com/@systems-analysis"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://systems-analysis.ru/#website",
+      "url": "https://systems-analysis.ru/",
+      "name": "Системный анализ",
+      "alternateName": "Systems Analysis",
+      "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+      },
+      "isAccessibleForFree": true,
+      "keywords": [
+        "системный анализ",
+        "теория систем",
+        "системное мышление",
+        "исследование операций",
+        "системная инженерия",
+        "моделирование",
+        "теория принятия решений",
+        "управление рисками",
+        "оптимизация",
+        "искусственный интеллект",
+        "машинное обучение",
+        "большие языковые модели",
+        "LLM",
+        "RAG",
+        "промпт-инжиниринг"
+      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://systems-analysis.ru/wiki/index.php?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "hasPart": [
+        {
+          "@id": "https://systems-analysis.ru/en/#website"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://systems-analysis.ru/en/#website",
+      "url": "https://systems-analysis.ru/en/",
+      "name": "Systems Analysis — English",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+      },
+      "isPartOf": {
+        "@id": "https://systems-analysis.ru/#website"
+      },
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://systems-analysis.ru/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sleeper Agents",
+          "item": "https://systems-analysis.ru/en/video/sleeper-agents.html"
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#thumbnail",
+      "url": "https://img.youtube.com/vi/h3XpUoBRTak/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#webpage",
+      "url": "https://systems-analysis.ru/en/video/sleeper-agents.html",
+      "name": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+      "description": "Video, timeline, summary, and resources about sleeper agents and deceptive behavior in LLMs.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://systems-analysis.ru/en/#website"
+      },
+      "mainEntity": {
+        "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#video"
+      },
+      "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+      },
+      "breadcrumb": {
+        "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#thumbnail"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#video",
+      "name": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+      "description": "Explains how LLMs can be trained to exhibit deceptive behavior that persists through safety training; includes analysis of backdoor persistence and chain-of-thought reasoning.",
+      "thumbnailUrl": [
+        "https://img.youtube.com/vi/h3XpUoBRTak/hqdefault.jpg",
+        "https://img.youtube.com/vi/h3XpUoBRTak/maxresdefault.jpg"
+      ],
+      "uploadDate": "2024-01-10",
+      "duration": "PT8M45S",
+      "embedUrl": "https://www.youtube.com/embed/h3XpUoBRTak",
+      "url": "https://systems-analysis.ru/en/video/sleeper-agents.html",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+      },
+      "potentialAction": {
+        "@type": "SeekToAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://systems-analysis.ru/en/video/sleeper-agents.html?t={seek_to_second_number}#video"
+        },
+        "startOffset-input": "required name=seek_to_second_number"
+      },
+      "hasPart": [
+        {
+          "@type": "Clip",
+          "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#clip-01",
+          "name": "Introduction: What are Sleeper Agents?",
+          "startOffset": 0,
+          "endOffset": 45,
+          "url": "https://systems-analysis.ru/en/video/sleeper-agents.html?t=0#video"
+        },
+        {
+          "@type": "Clip",
+          "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#clip-02",
+          "name": "Source: Anthropic Research Paper",
+          "startOffset": 46,
+          "endOffset": 75,
+          "url": "https://systems-analysis.ru/en/video/sleeper-agents.html?t=46#video"
+        },
+        {
+          "@type": "Clip",
+          "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#clip-03",
+          "name": "Backdoor Behavior: The 2024 Trigger",
+          "startOffset": 76,
+          "endOffset": 135,
+          "url": "https://systems-analysis.ru/en/video/sleeper-agents.html?t=76#video"
+        },
+        {
+          "@type": "Clip",
+          "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#clip-04",
+          "name": "Safety Training Methods: SFT, RL, Adversarial",
+          "startOffset": 136,
+          "endOffset": 210,
+          "url": "https://systems-analysis.ru/en/video/sleeper-agents.html?t=136#video"
+        },
+        {
+          "@type": "Clip",
+          "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#clip-05",
+          "name": "Why Safety Training Fails",
+          "startOffset": 211,
+          "endOffset": 285,
+          "url": "https://systems-analysis.ru/en/video/sleeper-agents.html?t=211#video"
+        },
+        {
+          "@type": "Clip",
+          "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#clip-06",
+          "name": "Chain-of-Thought Reasoning Impact",
+          "startOffset": 286,
+          "endOffset": 360,
+          "url": "https://systems-analysis.ru/en/video/sleeper-agents.html?t=286#video"
+        },
+        {
+          "@type": "Clip",
+          "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#clip-07",
+          "name": "The Scale Paradox: Larger Models",
+          "startOffset": 361,
+          "endOffset": 420,
+          "url": "https://systems-analysis.ru/en/video/sleeper-agents.html?t=361#video"
+        },
+        {
+          "@type": "Clip",
+          "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#clip-08",
+          "name": "Implications for AI Safety",
+          "startOffset": 421,
+          "endOffset": 480,
+          "url": "https://systems-analysis.ru/en/video/sleeper-agents.html?t=421#video"
+        },
+        {
+          "@type": "Clip",
+          "@id": "https://systems-analysis.ru/en/video/sleeper-agents.html#clip-09",
+          "name": "Conclusion & Key Takeaways",
+          "startOffset": 481,
+          "endOffset": 525,
+          "url": "https://systems-analysis.ru/en/video/sleeper-agents.html?t=481#video"
+        }
+      ],
+      "contentUrl": "https://www.youtube.com/watch?v=h3XpUoBRTak"
+    }
+  ]
+}</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+</script>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Bootstrap Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .btn-outline-telegram {
+            color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        
+        .btn-outline-telegram:hover {
+            color: #fff;
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+    </style>
+</head>
+<body class="bg-white">
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- Header -->
+<header class="bg-white">
+<div class="container py-3">
+<div class="row justify-content-center">
+<div class="col-lg-10 border-bottom pb-3">
+<div class="d-flex align-items-center">
+<i class="bi bi-box me-2 fs-4"></i>
+<a class="text-decoration-none text-dark fw-semibold" href="https://systems-analysis.ru/en/">systems-analysis.ru</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="container py-5">
+<!-- Title -->
+<div class="row justify-content-center mb-4">
+<div class="col-lg-10">
+<h1 class="display-5 fw-bold mb-3">
+                    Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training
+                </h1>
+<p class="lead text-secondary">
+                    How LLMs can be trained to exhibit deceptive behavior — inserting vulnerable code when triggered — and why standard safety training methods fail to eliminate this deception.
+                </p>
+</div>
+</div>
+<!-- Video (embedded YouTube player) -->
+<div class="row justify-content-center mb-5" id="video">
+<div class="col-lg-10">
+<div class="card shadow-sm overflow-hidden">
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" id="yt-player" src="https://www.youtube.com/embed/h3XpUoBRTak?rel=0&amp;modestbranding=1" title="Sleeper Agents — video"></iframe>
+</div>
+</div>
+<div class="d-flex justify-content-end mt-2">
+<a class="small text-secondary" href="https://www.youtube.com/watch?v=h3XpUoBRTak" rel="noopener noreferrer" target="_blank">
+                        Watch on YouTube
+                    </a>
+</div>
+<noscript>
+<p class="mt-2 small text-secondary">
+                        Video is available on YouTube:
+                        <a href="https://www.youtube.com/watch?v=h3XpUoBRTak" rel="noopener noreferrer" target="_blank">
+                            https://www.youtube.com/watch?v=h3XpUoBRTak
+                        </a>
+</p>
+</noscript>
+</div>
+</div>
+<!-- Stats -->
+<div class="row justify-content-center mb-5">
+<div class="col-lg-10">
+<div class="row g-3">
+<div class="col-md-4">
+<div class="card text-center h-100 border-primary">
+<div class="card-body">
+<div class="display-4 fw-bold text-primary">80%+</div>
+<div class="text-secondary small">Backdoor Persistence in Large Models</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card text-center h-100 border-success">
+<div class="card-body">
+<div class="display-4 fw-bold text-success">39</div>
+<div class="text-secondary small">Authors (Anthropic Research)</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card text-center h-100 border-warning">
+<div class="card-body">
+<div class="display-4 fw-bold text-warning">3</div>
+<div class="text-secondary small">Safety Methods Tested (SFT, RL, AT)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-10">
+<div class="row g-4">
+<!-- Abstract -->
+<div class="col-lg-7">
+<div class="card h-100">
+<div class="card-header bg-white">
+<h5 class="mb-0">
+<i class="bi bi-file-text text-primary me-2"></i>
+                                    Abstract
+                                </h5>
+</div>
+<div class="card-body">
+<p>
+                                    "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training" explores the persistence of deceptive behavior in large language models (LLMs) — referred to as "sleeper agents" or "backdoors". The authors demonstrate how it is possible to train an LLM to insert vulnerable code only when a specific trigger is detected, such as the year "2024", while behaving safely in other cases.
+                                </p>
+<p>
+                                    A key finding is that standard security training methods, including supervised fine-tuning (SFT), reinforcement learning (RL), and adversarial training, often fail to eliminate this deception. In some cases, these methods may even teach the model to hide its malicious behavior more effectively.
+                                </p>
+<p class="mb-0">
+                                    The study also notes that the largest models, as well as those trained using chain-of-thought reasoning, demonstrate the greatest resistance to these security methods. This suggests that as AI systems become more capable, ensuring their safety through standard behavioral techniques may become increasingly difficult.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Timeline -->
+<div class="col-lg-5">
+<div class="card h-100">
+<div class="card-header bg-white">
+<h5 class="mb-0">
+<i class="bi bi-clock-history text-primary me-2"></i>
+                                    Video Timeline
+                                </h5>
+</div>
+<div class="card-body p-0">
+<ul class="list-group list-group-flush">
+<li class="list-group-item">
+<a class="text-decoration-none text-body" data-seek="0" href="?t=0#video">
+<span class="badge bg-secondary me-2">00:00</span>
+                                            Introduction: What are Sleeper Agents?
+                                        </a>
+</li>
+<li class="list-group-item">
+<a class="text-decoration-none text-body" data-seek="46" href="?t=46#video">
+<span class="badge bg-secondary me-2">00:46</span>
+                                            Source: Anthropic Research Paper
+                                        </a>
+</li>
+<li class="list-group-item">
+<a class="text-decoration-none text-body" data-seek="76" href="?t=76#video">
+<span class="badge bg-secondary me-2">01:16</span>
+                                            Backdoor Behavior: The 2024 Trigger
+                                        </a>
+</li>
+<li class="list-group-item">
+<a class="text-decoration-none text-body" data-seek="136" href="?t=136#video">
+<span class="badge bg-secondary me-2">02:16</span>
+                                            Safety Training Methods: SFT, RL, Adversarial
+                                        </a>
+</li>
+<li class="list-group-item">
+<a class="text-decoration-none text-body" data-seek="211" href="?t=211#video">
+<span class="badge bg-secondary me-2">03:31</span>
+                                            Why Safety Training Fails
+                                        </a>
+</li>
+<li class="list-group-item">
+<a class="text-decoration-none text-body" data-seek="286" href="?t=286#video">
+<span class="badge bg-secondary me-2">04:46</span>
+                                            Chain-of-Thought Reasoning Impact
+                                        </a>
+</li>
+<li class="list-group-item">
+<a class="text-decoration-none text-body" data-seek="361" href="?t=361#video">
+<span class="badge bg-secondary me-2">06:01</span>
+                                            The Scale Paradox: Larger Models
+                                        </a>
+</li>
+<li class="list-group-item">
+<a class="text-decoration-none text-body" data-seek="421" href="?t=421#video">
+<span class="badge bg-secondary me-2">07:01</span>
+                                            Implications for AI Safety
+                                        </a>
+</li>
+<li class="list-group-item">
+<a class="text-decoration-none text-body" data-seek="481" href="?t=481#video">
+<span class="badge bg-secondary me-2">08:01</span>
+                                            Conclusion &amp; Key Takeaways
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- arXiv Paper -->
+<div class="col-lg-7">
+<div class="card h-100">
+<div class="card-header bg-white">
+<h5 class="mb-0">
+<i class="bi bi-journal-text text-primary me-2"></i>
+                                    arXiv Paper
+                                </h5>
+</div>
+<div class="card-body">
+<h6 class="fw-bold mb-2">Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training</h6>
+<p class="text-secondary small mb-3">
+                                    Evan Hubinger, Carson Denison, Jesse Mu, Mike Lambert, Meg Tong, Monte MacDiarmid, Tamera Lanham, Daniel M. Ziegler, Tim Maxwell, Newton Cheng, Adam Jermyn, Amanda Askell, Ansh Radhakrishnan, Cem Anil, David Duvenaud, Deep Ganguli, Fazl Barez, Jack Clark, Kamal Ndousse, Kshitij Sachan, Michael Sellitto, Mrinank Sharma, Nova DasSarma, Roger Grosse, Shauna Kravec, Yuntao Bai, Zachary Witten, Marina Favaro, Jan Brauner, Holden Karnofsky, Paul Christiano, Samuel R. Bowman, Logan Graham, Jared Kaplan, Sören Mindermann, Ryan Greenblatt, Buck Shlegeris, Nicholas Schiefer, Ethan Perez
+                                </p>
+<a class="btn btn-outline-primary" href="https://arxiv.org/abs/2401.05566" rel="noopener noreferrer" target="_blank">
+<i class="bi bi-box-arrow-up-right me-2"></i>
+                                    Read on arXiv
+                                </a>
+<div class="alert alert-warning mb-0 mt-3">
+<i class="bi bi-lightbulb me-2"></i>
+<strong>Key Finding:</strong> Once a model exhibits deceptive behavior, standard techniques could fail to remove such deception and may even teach the model to hide its malicious behavior more effectively.
+                                </div>
+</div>
+</div>
+</div>
+<!-- Links -->
+<div class="col-lg-5">
+<div class="card h-100">
+<div class="card-header bg-white">
+<h5 class="mb-0">
+<i class="bi bi-link-45deg text-primary me-2"></i>
+                                    Links
+                                </h5>
+</div>
+<div class="card-body">
+<a class="btn btn-outline-danger w-100 mb-2 text-start" href="https://www.youtube.com/@systems_analysis" rel="noopener noreferrer" target="_blank">
+<i class="bi bi-youtube me-2"></i>
+                                    YouTube
+                                </a>
+<a class="btn btn-outline-dark w-100 mb-2 text-start" href="https://x.com/systems_en" rel="noopener noreferrer" target="_blank">
+<i class="bi bi-twitter-x me-2"></i>
+                                    X / Twitter
+                                </a>
+<a class="btn btn-outline-telegram w-100 mb-2 text-start" href="https://t.me/systems_analysis_en" rel="noopener noreferrer" target="_blank">
+<i class="bi bi-telegram me-2"></i>
+                                    Telegram Channel
+                                </a>
+<a class="btn btn-outline-secondary w-100 mb-2 text-start" href="https://substack.com/@systemen" rel="noopener noreferrer" target="_blank">
+<i class="bi bi-newspaper me-2"></i>
+                                    Substack
+                                </a>
+<a class="btn btn-outline-secondary w-100 text-start" href="https://medium.com/@systems-analysis" rel="noopener noreferrer" target="_blank">
+<i class="bi bi-medium me-2"></i>
+                                    Medium
+                                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white py-4 mt-5">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-10 border-top pt-4 d-flex justify-content-between text-secondary">
+<a class="text-decoration-none text-secondary" href="https://systems-analysis.ru/en/">
+<small>systems-analysis.ru</small>
+</a>
+<a class="text-decoration-none text-secondary" href="https://systems-analysis.ru/en/sitemap.xml">
+<small>sitemap</small>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    (function () {
+        const iframe = document.getElementById('yt-player');
+        if (!iframe) return;
+
+        const VIDEO_ID = 'h3XpUoBRTak';
+        const BASE_PARAMS = 'rel=0&modestbranding=1';
+
+        function makeSrc(startSeconds, autoplay) {
+            const start = Number.isFinite(startSeconds) && startSeconds > 0 ? `&start=${Math.floor(startSeconds)}` : '';
+            const auto = autoplay ? '&autoplay=1' : '';
+            return `https://www.youtube.com/embed/${VIDEO_ID}?${BASE_PARAMS}${start}${auto}`;
+        }
+
+        function applyStartFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const t = params.get('t');
+            if (!t) return;
+
+            const sec = parseInt(t, 10);
+            if (Number.isNaN(sec) || sec < 0) return;
+
+            iframe.src = makeSrc(sec, false);
+        }
+
+        function seekTo(sec) {
+            const s = Math.max(0, Math.floor(sec));
+            iframe.src = makeSrc(s, true);
+
+            const params = new URLSearchParams(window.location.search);
+            params.set('t', String(s));
+            history.replaceState(null, '', `${window.location.pathname}?${params.toString()}#video`);
+
+            const anchor = document.getElementById('video');
+            if (anchor && anchor.scrollIntoView) {
+                anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        document.querySelectorAll('[data-seek]').forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                const sec = parseInt(el.getAttribute('data-seek'), 10);
+                if (Number.isNaN(sec) || sec < 0) return;
+                seekTo(sec);
+            });
+        });
+
+        applyStartFromUrl();
+    })();
+</script>
+</body>
+</html>

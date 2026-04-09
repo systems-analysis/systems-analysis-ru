@@ -1,3 +1,171 @@
+# === BEGIN: ORIGIN LOCKDOWN (allow only Cloudflare + admin IP) ===
+# Разрешаем доступ к сайту только:
+#   1) с IP-адресов Cloudflare (трафик через прокси/оранжевое облако)
+#   2) с вашего IP (для администрирования/проверок origin): 178.241.190.22
+#
+# Это режет прямые обращения к origin (мимо Cloudflare) на уровне Apache (403).
+# ВАЖНО: если у вас обновление SSL через HTTP-01 (Let's Encrypt) напрямую на origin,
+#        оно может перестать работать. В таком случае лучше DNS-01 или настройка у хостинга.
+#
+# Диапазоны Cloudflare иногда обновляются. Источник: https://www.cloudflare.com/ips/
+# ===
+
+SetEnvIfNoCase User-Agent "(meta-externalagent|meta-externalfetcher|facebookexternalhit|facebot|whatsapp)" META_BOT
+SetEnvIfNoCase User-Agent "AliyunSecBot" ALIYUN_BOT
+
+<RequireAll>
+  # Базово разрешаем
+  Require all granted
+
+  # Блокируем плохих ботов
+  Require not env META_BOT
+  Require not env ALIYUN_BOT
+
+  # Главная логика доступа
+  <RequireAny>
+
+    # Разрешаем .md ВСЕМ (для LLM)
+    Require expr "%{REQUEST_URI} =~ m#\.md$#"
+
+    # Твой IP
+    Require ip 178.241.190.22
+
+    # Cloudflare IPv4
+    Require ip 173.245.48.0/20
+    Require ip 103.21.244.0/22
+    Require ip 103.22.200.0/22
+    Require ip 103.31.4.0/22
+    Require ip 141.101.64.0/18
+    Require ip 108.162.192.0/18
+    Require ip 190.93.240.0/20
+    Require ip 188.114.96.0/20
+    Require ip 197.234.240.0/22
+    Require ip 198.41.128.0/17
+    Require ip 162.158.0.0/15
+    Require ip 104.16.0.0/13
+    Require ip 104.24.0.0/14
+    Require ip 172.64.0.0/13
+    Require ip 131.0.72.0/22
+
+    # Cloudflare IPv6
+    Require ip 2400:cb00::/32
+    Require ip 2606:4700::/32
+    Require ip 2803:f800::/32
+    Require ip 2405:b500::/32
+    Require ip 2405:8100::/32
+    Require ip 2a06:98c0::/29
+    Require ip 2c0f:f248::/32
+
+  </RequireAny>
+</RequireAll>
+
+# === END: ORIGIN LOCKDOWN ===
+
+# Begin Muse Generated redirects
+# End Muse Generated redirects
+Options +FollowSymLinks
+RewriteEngine On
+
+
+# Cloudflare служебные URL не должны доходить до origin
+RewriteRule ^cdn-cgi/ - [F,L]
+
+# Drop common exploit scans fast
+RewriteRule ^\.git/ - [F,L]
+RewriteRule ^\.env$ - [F,L]
+RewriteRule ^wp- - [F,L]
+RewriteRule ^xmlrpc\.php$ - [F,L]
+RewriteRule ^phpmyadmin/ - [F,L]
+
+# Block proxy-style absolute-form requests: "GET https://host/path HTTP/1.1"
+RewriteCond %{THE_REQUEST} [[:space:]]https?:// [NC]
+RewriteRule ^ - [F,L]
+
+# --- Canonical redirects / routing ---
+
+# systems-analysis.ru.ru -> systems-analysis.ru
+RewriteCond %{HTTP_HOST} ^systems-analysis\.ru\.ru$ [NC]
+RewriteRule ^(.*)$ http://systems-analysis.ru/$1 [R=301,L]
+
+RewriteBase /
+RewriteRule ^index\.html$ http://systems-analysis.ru/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ http://systems-analysis.ru/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
+
+RewriteCond %{REQUEST_URI} ^/index$ [OR]
+RewriteCond %{REQUEST_URI} ^/index[.]+(\w+)$
+RewriteRule . / [R=301,L]
+
+<IfModule mod_deflate.c>
+  # Compress only text-like responses
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/rss+xml
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header append Vary Accept-Encoding
+</IfModule>
+
+<IfModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text\.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image\.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+<FilesMatch "\.(pdf|doc)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=2592000"
+  </IfModule>
+</FilesMatch>
+
+
+<IfModule mod_expires.c>
+   
+#ïî óìîë÷àíèþ êåø â 5 ñåêóíä
+ExpiresDefault "access plus 1 days"
+ 
+# Âêëþ÷àåì êýøèðîâàíèå èçîáðàæåíèé è ôëýø íà ìåñÿö
+ExpiresByType image/x-icon "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/svg "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ 
+# Âêëþ÷àåì êýøèðîâàíèå css, javascript è òåêñòîâûõ ôàéëîô íà îäíó íåäåëþ
+ExpiresByType text/css "access plus 604800 seconds"
+ExpiresByType text/javascript "access plus 604800 seconds"
+ExpiresByType application/javascript "access plus 604800 seconds"
+ExpiresByType application/x-javascript "access plus 604800 seconds"
+ 
+# Âêëþ÷àåì êýøèðîâàíèå html è htm ôàéëîâ íà îäèí äåíü
+ExpiresByType text/html "access plus 43200 seconds"
+ 
+# Âêëþ÷àåì êýøèðîâàíèå xml ôàéëîâ íà äåñÿòü ìèíóò
+ExpiresByType application/xhtml+xml "access plus 600 seconds"
+ 
+# Íåñòàíäàðòíûå øðèôòû ñàéòà 
+ExpiresByType application/x-font-ttf "access plus 1 month"
+ExpiresByType font/opentype "access plus 1 month"
+ExpiresByType application/x-font-woff "access plus 1 month"
+ExpiresByType image/svg+xml "access plus 1 month"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+</IfModule>
+
+#404  Ñòðàíèöà íå íàéäåíà
+ErrorDocument 404 /404.html
+
 # 301 redirects: operation_reserch -> operation_research
 RewriteEngine On
 
@@ -31,10 +199,3 @@ AddDefaultCharset utf-8
 # Markdown-файлы
 AddCharset utf-8 .md
 AddType text/plain;charset=utf-8 .md
-
-# HTML
-AddCharset utf-8 .html
-
-# CSS / JS
-AddCharset utf-8 .css
-AddCharset utf-8 .js

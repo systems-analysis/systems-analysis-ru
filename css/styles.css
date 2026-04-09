@@ -290,6 +290,13 @@ button:focus-visible {
   text-decoration-color: var(--link-accent-hover);
 }
 
+.nav-links .nav-current {
+  color: var(--fg);
+  text-decoration: none;
+  cursor: default;
+  visibility: visible;
+}
+
 .nav-links span {
   color: var(--fg-separator);
   margin: 0 4px;
@@ -512,6 +519,52 @@ button:focus-visible {
   font-size: 15px;
 }
 
+.links-row {
+  display: flex !important;
+  flex-wrap: nowrap;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.links-row > .links-section {
+  flex: 1 1 0%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .links-row {
+    flex-wrap: wrap;
+  }
+  .links-row > .links-section {
+    flex: 1 1 45%;
+  }
+}
+@media (max-width: 480px) {
+  .links-row {
+    flex-direction: column;
+  }
+  .links-row > .links-section {
+    margin-bottom: 24px;
+  }
+}
+
+.links-section ul.cols-3 {
+  column-count: 3;
+  column-gap: 24px;
+}
+.links-section ul.cols-3 li {
+  break-inside: avoid;
+}
+@media (max-width: 768px) {
+  .links-section ul.cols-3 {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .links-section ul.cols-3 {
+    column-count: 1;
+  }
+}
+
 /* Site tree (catalog) */
 .site-tree {
   list-style: none;
@@ -724,6 +777,23 @@ button:focus-visible {
     border-left: 2px solid var(--rule);
   }
 }
+
+/* --- Publications --- */
+
+.publications-page .note-text .pub-meta {
+  font: 15px/1.6 Helvetica, Arial, sans-serif;
+  color: var(--fg-muted);
+  margin-bottom: 4px;
+}
+
+.publications-page .note-text .pub-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fg-secondary);
+  margin-bottom: 0;
+}
+
+/* --- End Publications --- */
 
 @media print {
   :root.dark {

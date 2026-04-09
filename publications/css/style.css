@@ -1,0 +1,182 @@
+/* --- Начало файла style.css --- */
+
+/* Базовые настройки и сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* 16px по умолчанию */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Основной шрифт для статьи */
+    line-height: 1.7;
+    color: #1D1D1F; /* Основной цвет текста */
+    background-color: #fff;
+    padding: 2rem 0 2rem 0;
+}
+
+/* --- Стили для меню (верхнего и нижнего) --- */
+.top-nav,
+.bottom-nav { /* Применяем к обоим меню */
+    max-width: 960px; /* Ограничиваем ширину */
+    margin-left: auto;  /* Центрируем блок меню */
+    margin-right: auto; /* Центрируем блок меню */
+    padding: 1rem 2rem; /* Внутренние отступы */
+    text-align: left;   /* Выравнивание по левому краю */
+}
+
+.top-nav {
+     margin-bottom: 4rem; /* УВЕЛИЧЕН Отступ под верхним меню */
+}
+
+.bottom-nav {
+    margin-top: 3rem; /* Отступ НАД нижним меню */
+    padding-top: 1.5rem; /* Дополнительный отступ сверху внутри блока */
+    border-top: 1px solid #eee; /* Линия над нижним меню */
+}
+
+.top-nav ul,
+.bottom-nav ul { /* Применяем к спискам в обоих меню */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.top-nav li,
+.bottom-nav li { /* Применяем к пунктам в обоих меню */
+    display: inline-block;
+    margin-right: 1.5em;
+    margin-left: 0;
+    margin-bottom: 0.5em;
+}
+.top-nav li:last-child,
+.bottom-nav li:last-child { /* Применяем к последним пунктам */
+     margin-right: 0;
+}
+.top-nav a,
+.bottom-nav a { /* Применяем к ссылкам в обоих меню */
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #25578a; /* Темно-синий цвет */
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #a1c9f0; /* Постоянный бордер */
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+.top-nav a:hover,
+.top-nav a:focus,
+.bottom-nav a:hover,
+.bottom-nav a:focus { /* Применяем к наведению в обоих меню */
+    color: #25578a;
+    border-bottom-color: #cce5ff; /* Светлее бордер при наведении */
+    outline: none;
+}
+ /* --- Конец стилей для меню --- */
+
+
+/* Контейнер статьи */
+.article-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem 1rem 2rem; /* Уменьшен верхний padding */
+    background-color: #fff;
+}
+
+/* Медиа-запросы */
+@media (max-width: 992px) {
+     .article-container, .top-nav, .bottom-nav { /* Применяем к обоим меню */
+         padding-left: 1.5rem;
+         padding-right: 1.5rem;
+         max-width: 100%;
+     }
+     body { padding-top: 1rem; padding-bottom: 1rem; }
+     html { font-size: 95%; }
+     .top-nav { margin-bottom: 2.5rem; } /* УВЕЛИЧЕН Отступ под верхним меню для планшетов */
+     .bottom-nav { margin-top: 2rem; }
+     .top-nav li, .bottom-nav li { margin-right: 1em; }
+}
+ @media (max-width: 576px) {
+     .article-container, .top-nav, .bottom-nav {
+         padding-left: 1rem;
+         padding-right: 1rem;
+     }
+      .top-nav li, .bottom-nav li { margin-right: 0.8em; }
+      .top-nav a, .bottom-nav a { font-size: 0.9rem; }
+ }
+
+/* Заголовок статьи */
+ .article-header { text-align: left; margin-bottom: 2.5rem; }
+.article-header h1 { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 2.5rem; line-height: 1.2; margin-bottom: 0.5rem; color: #1D1D1F; /* Цвет заголовка h1 */ }
+.article-header .source-info { font-size: 1rem; color: #444; /* Оставлен немного светлее для контраста */ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin-bottom: 1rem; }
+.article-header .meta { font-size: 0.9rem; color: #555; /* Оставлен немного светлее для контраста */ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+.article-header .meta .author { font-weight: 600; }
+
+/* Основной контент статьи */
+.article-content { font-size: 1.1rem; }
+.article-content p { margin-bottom: 1.5em; text-align: left; }
+.article-content h2, .article-content h3, .article-content h4 { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin-top: 2.5em; margin-bottom: 1em; line-height: 1.3; color: #1D1D1F; /* Цвет заголовков h2, h3, h4 */ }
+.article-content h2 { font-size: 1.8rem; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
+.article-content h3 { font-size: 1.4rem; margin-top: 2em; }
+/* Ссылки в тексте */
+.article-content a { color: #007bff; text-decoration: none; border-bottom: 1px solid #cce5ff; transition: color 0.2s ease, border-bottom-color 0.2s ease; }
+.article-content a:hover, .article-content a:focus { color: #0056b3; border-bottom-color: #0056b3; }
+/* Списки */
+.article-content ul, .article-content ol { margin-bottom: 1.5em; padding-left: 2em; }
+ .article-content ul ul, .article-content ol ol, .article-content ul ol, .article-content ol ul { margin-top: 0.5em; margin-bottom: 0.5em; padding-left: 1.5em; }
+.article-content li { margin-bottom: 0.5em; }
+/* Цитаты */
+.article-content blockquote {
+    margin: 1.5em 0;
+    padding: 1em 1.5em;
+    border-left: 3px solid #aaaaaa; /* ИЗМЕНЕНО: Нейтральный серый цвет полосы */
+    background-color: #f8f9fa;
+    color: #555;
+    font-style: italic;
+}
+.article-content blockquote p { margin-bottom: 0.5em; font-style: normal; }
+.article-content blockquote footer { font-style: normal; font-size: 0.9rem; color: #777; margin-top: 0.5em; }
+/* Код */
+.article-content code:not(pre code) { font-family: 'Courier New', Courier, monospace; background-color: #e9ecef; padding: 0.2em 0.4em; font-size: 0.9em; border-radius: 3px; color: #333; }
+.article-content pre { background-color: #2d2d2d; color: #f1f1f1; padding: 1em; margin-bottom: 1.5em; border-radius: 4px; overflow-x: auto; font-family: 'Courier New', Courier, monospace; font-size: 0.95rem; line-height: 1.5; }
+.article-content pre code { background-color: transparent; padding: 0; font-size: inherit; color: inherit; }
+
+/* Футер со сносками */
+.article-footnotes {
+    margin-top: 3rem; /* Отступ от основного контента */
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #555; /* Оставлен серым для отделения от основного текста */
+    line-height: 1.5;
+     max-width: 960px; /* Ограничиваем ширину */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem; /* Отступы как у контента */
+    padding-right: 2rem;
+}
+ @media (max-width: 992px) {
+     .article-footnotes {
+         padding-left: 1.5rem;
+         padding-right: 1.5rem;
+         max-width: 100%;
+     }
+ }
+ @media (max-width: 576px) {
+     .article-footnotes {
+         padding-left: 1rem;
+         padding-right: 1rem;
+     }
+ }
+.article-footnotes p {
+     margin-bottom: 0.5em;
+}
+
+/* Курсив для названий */
+em { font-style: italic; }
+
+/* --- Конец файла style.css --- */
