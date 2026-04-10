@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Optimización</title>
+<meta name="description" content="Óptimo significa el mejor en unas condiciones dadas. La calidad se evalúa mediante un criterio de optimalidad, y las condiciones se establecen en forma de restricciones sobre criterios adicionales.">
+<meta name="keywords" content="optimización,óptimo,criterio de optimalidad,función objetivo,restricciones,investigación de operaciones">
+<link rel="canonical" href="https://systems-analysis.ru/es/optimization.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/optimization.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/optimization.html">
+<link rel="alternate" hreflang="es" href="https://systems-analysis.ru/es/optimization.html">
+<meta property="og:title" content="Optimización">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/es/optimization.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="Óptimo significa el mejor en unas condiciones dadas. La calidad se evalúa mediante un criterio de optimalidad, y las condiciones se establecen en forma de restricciones sobre criterios adicionales.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="../js/theme-init.js"></script>
+<link rel="stylesheet" href="../css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/es/optimization.html#article",
+    "headline": "Optimización",
+    "description": "Óptimo significa el mejor en unas condiciones dadas. La calidad se evalúa mediante un criterio de optimalidad, y las condiciones se establecen en forma de restricciones sobre criterios adicionales.",
+    "url": "https://systems-analysis.ru/es/optimization.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "es",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/es/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/es/optimization.html"
+    },
+    "keywords": [
+        "optimización",
+        "óptimo",
+        "criterio de optimalidad",
+        "función objetivo",
+        "restricciones",
+        "investigación de operaciones"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01",
+    "about": {
+        "@type": "DefinedTerm",
+        "name": "Optimización",
+        "description": "Búsqueda de la mejor solución en unas condiciones dadas, donde la calidad se evalúa mediante un criterio de optimalidad y las condiciones se establecen en forma de restricciones.",
+        "sameAs": [
+            "https://www.wikidata.org/entity/Q141495",
+            "https://es.wikipedia.org/wiki/Optimización_(matemática)",
+            "https://en.wikipedia.org/wiki/Mathematical_optimization",
+            "https://systems-analysis.ru/wiki/Оптимизация",
+            "https://systems-analysis.ru/eng/Optimization"
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://systems-analysis.ru/es/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Teoría de la decisión",
+            "item": "https://systems-analysis.ru/es/decision_theory.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Optimización"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Menú</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/es/">Inicio</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/sections.html">Secciones</a>
+        <span aria-hidden="true">·</span>
+        <a href="/wiki/">Wiki</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/books.html">Libros</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/catalog.html">Catálogo</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/optimization.html">English</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Cambiar tema"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Cambiar fuente"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Optimización</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p><strong>Óptimo</strong> significa el mejor en unas condiciones dadas. La calidad se evalúa mediante un criterio de optimalidad, y las condiciones se establecen en forma de restricciones sobre criterios adicionales.</p>
+<p>La aspiración a mejorar la eficiencia del trabajo, de la creación, de cualquier actividad orientada a un fin —aspiración natural del ser humano— encontró su expresión clara y comprensible en la idea de optimalidad. La diferencia entre la comprensión estrictamente científica y la «común», cotidiana, de la optimalidad es bastante pequeña. Es cierto que expresiones como «lo más óptimo» o «lograremos el máximo efecto con el mínimo de gastos» son matemáticamente incorrectas, pero las personas que las utilizan, en realidad, simplemente expresan de forma imprecisa y desafortunada una idea correcta: en cuanto se trata de una optimización concreta, corrigen rápida y fácilmente sus formulaciones.</p>
+<p>La optimización es, en matemáticas, informática e investigación de operaciones, el problema de hallar el extremo (mínimo o máximo) de una función objetivo en una determinada región de un espacio vectorial de dimensión finita, delimitada por un conjunto de igualdades y/o desigualdades lineales y/o no lineales.</p>
+<p>Los <a href="/es/model.html" class="text-link">modelos</a> de optimización están destinados a determinar los parámetros óptimos (mejores) del objeto modelado según un determinado criterio, o bien a encontrar el régimen óptimo (mejor) de gestión de un determinado proceso. Parte de los parámetros del modelo se asignan como parámetros de control, modificando los cuales pueden obtenerse distintas variantes de conjuntos de valores de los parámetros de salida. Por regla general, estos modelos se construyen utilizando uno o varios modelos descriptivos e incluyen un criterio que permite comparar entre sí las distintas variantes de conjuntos de valores de los parámetros de salida con el <a href="/es/goal.html" class="text-link">objetivo</a> de elegir la mejor. Sobre el dominio de valores de los parámetros de entrada pueden imponerse restricciones en forma de igualdades y desigualdades, asociadas a las particularidades del objeto o proceso considerado. El objetivo de los modelos de optimización es la búsqueda de aquellos parámetros de control admisibles para los cuales el criterio de elección alcanza su «mejor valor».</p>
+<p>El problema se formula en forma de modelo matemático. El modelo matemático tipo de la investigación de operaciones se presenta en la siguiente formulación:</p>
+<p>Maximización o minimización de la función objetivo, sujeta al cumplimiento de las restricciones.</p>
+<p>Se denominan óptimas las soluciones que, por unos u otros criterios, resultan preferibles a las demás. Cada elección de la mejor alternativa es concreta, puesto que se basa en la conformidad con los criterios establecidos. Al hablar de la alternativa óptima, se indican estos criterios («óptimo según…»). Lo que es óptimo según un criterio no lo es necesariamente según otro.</p>
+<p>Una solución es admisible si satisface todas las restricciones del modelo. Las soluciones admisibles pueden ser, en algunos casos, infinitas.</p>
+<p>Una solución es óptima si, además de ser admisible, la función objetivo alcanza en ella su valor máximo o mínimo.</p>
+<p>La optimización es la maximización o minimización de la función objetivo.</p>
+<p>Un modelo de optimización es un modelo de toma de decisiones que contiene un indicador de eficiencia (función objetivo) que debe optimizarse sujeto al cumplimiento de un conjunto dado de restricciones.</p>
+<p>Una solución óptima es un conjunto admisible de valores de las variables de decisión que optimiza la función objetivo del modelo de optimización.</p>
+<p>Un gran número de los problemas de elección que se encuentran en la práctica se reduce a la búsqueda de las alternativas mejores o más preferibles para la persona, y con frecuencia a la búsqueda de la única mejor alternativa. Cada decisor tiene sus propias representaciones subjetivas sobre lo que es preferible para él en una situación concreta de elección.</p>
+<p>Existe un número suficiente de problemas para los cuales es posible construir un modelo matemático de elección en el que el concepto de mejor alternativa se formaliza mediante la definición de uno o varios indicadores numéricos de eficiencia o criterios de calidad de la solución. Estos indicadores, aunque los establece el decisor, tienen un carácter objetivo determinado por el contenido del problema que se resuelve, y se expresan como funciones que dependen de las variables mediante las cuales se miden las propiedades de las alternativas. En tales casos, la alternativa más preferible para el decisor se considera la denominada alternativa óptima, que corresponde al valor extremo de uno o varios indicadores de eficiencia de la solución en las condiciones existentes.</p>
+<p>Un aspecto fundamental para la formulación del problema de elección óptima es la posibilidad de describir la situación problemática y las preferencias del decisor en forma cuantitativa. Esto significa, en primer lugar, que las alternativas posibles (objetos, modos de acción) se determinan mediante características cuantitativas (variables, parámetros, atributos) medidas con la ayuda de escalas numéricas. En segundo lugar, deben establecerse indicadores cuantitativos (criterios de optimalidad, indicadores de eficiencia, funciones objetivo, funciones de valor), por cuya magnitud se evalúa la calidad de la alternativa elegida. Este tipo de situaciones son características de los problemas bien estructurados y de las situaciones de elección recurrentes, típicos de la investigación de operaciones y del control óptimo.</p>
+<p>Para el análisis de las posibles alternativas de solución del problema (modos de alcanzar el objetivo) y la selección entre ellas de una o varias mejores, se construyen modelos formales de elección óptima. El modelo ofrece una representación simplificada del problema real y debe reflejar las dependencias y relaciones más importantes y objetivamente existentes entre las alternativas, las características que las describen y las restricciones impuestas por los factores controlables y no controlables. La construcción de tal modelo es tarea de los consultores-analistas y los expertos con la participación del decisor. Al construir el modelo de elección es necesario ponderar la adecuación y el detalle del modelo en relación con la precisión requerida de la solución del problema real de elección, así como con el volumen de información necesaria para la búsqueda de la solución, tanto la disponible como la que puede obtenerse adicionalmente.</p>
+<p>Los problemas de optimización son problemas matemáticos estrictamente formales. El valor práctico de las soluciones de tales problemas depende directamente de la calidad del modelo matemático de partida. En <a href="/es/system.html" class="text-link">sistemas</a> complejos, el modelado matemático resulta difícil, aproximado e impreciso. Cuanto más complejo sea el sistema, con mayor cautela debe abordarse su optimización.</p>
+<p>Desde las posiciones del análisis de sistemas, la actitud hacia la optimización puede formularse del siguiente modo: es un medio poderoso para incrementar la eficiencia, pero debe utilizarse con cautela creciente a medida que aumenta la complejidad del problema.</p>
+<p>Pese a la evidente utilidad de la idea de optimización, la práctica exige un manejo cauteloso de ella. Para tal conclusión existen fundamentos suficientemente sólidos.</p>
+<ol>
+  <li>La solución óptima resulta con frecuencia inestable: cambios aparentemente insignificantes en las condiciones del problema pueden conducir a la elección de alternativas sustancialmente diferentes.</li>
+  <li>El sistema considerado es parte de un sistema mayor, y entonces la optimización local no conduce necesariamente al mismo resultado que el requerido del subsistema al optimizar el sistema en su conjunto. Esto lleva a la necesidad de vincular los criterios de los subsistemas con los del sistema, con lo que a menudo la optimización local deja de ser necesaria.</li>
+  <li>Los criterios caracterizan el objetivo solo de forma indirecta, a veces mejor, a veces peor, pero siempre de manera aproximada. La maximización del criterio de optimalidad se identifica con frecuencia con el objetivo, cuando en realidad son cosas distintas. De hecho, el criterio y el objetivo se relacionan entre sí como el modelo y el original, con todas las particularidades que de ello se derivan. Muchos objetivos resultan difíciles o incluso imposibles de describir cuantitativamente.</li>
+  <li>Si no se establecen todas las restricciones necesarias, la maximización del criterio principal puede producir simultáneamente efectos colaterales imprevistos e indeseados.</li>
+</ol>
+</div>
+      </article>
+    </div>
+
+    
+  
+    <div class="links">
+  <div class="links-section">
+    <h2>Metodologías</h2>
+    <ul>
+      <li><a href="methodology_or.html">Metodología de la investigación de operaciones</a></li>
+    </ul>
+  </div>
+  <div class="links-section">
+    <h2>Artículos relacionados</h2>
+    <ul>
+      <li><a href="modelling.html">Modelado</a></li>
+      <li><a href="systems_analysis.html">Análisis de sistemas</a></li>
+      <li><a href="operation_research.html">Investigación de operaciones</a></li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a> <span aria-hidden="true">/</span>
+    <a href="/es/decision_theory.html">Teoría de la decisión</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Optimización</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Cambiar tema"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_en">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/optimization.html">English</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/es/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"></button>
+  </footer>
+
+</div>
+
+<script src="../js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+<!-- Microsoft Clarity -->
+<script src="../js/clarity-init.js"></script>
+</body>
+</html>

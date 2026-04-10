@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Modelos de investigación de operaciones</title>
+<meta name="description" content="La construcción del modelo de la operación es la etapa clave de la investigación de operaciones. La operación se simplifica y esquematiza, y se destacan los factores esenciales. Se describen el modelo tipo y la clasificación de los problemas.">
+<meta name="keywords" content="modelado,modelo,investigación de operaciones,función objetivo,programación,problemas,eficiencia,óptimos,matemático,análisis de sistemas,solución">
+<link rel="canonical" href="https://systems-analysis.ru/es/operation_research_model.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/operation_research_model.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/operation_research_model.html">
+<link rel="alternate" hreflang="es" href="https://systems-analysis.ru/es/operation_research_model.html">
+<meta property="og:title" content="Modelos de investigación de operaciones">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/es/operation_research_model.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="La construcción del modelo de la operación es la etapa clave de la investigación de operaciones. Se describen el modelo tipo y la clasificación de los problemas.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="../js/theme-init.js"></script>
+<link rel="stylesheet" href="../css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/es/operation_research_model.html#article",
+    "headline": "Modelos de investigación de operaciones",
+    "description": "La construcción del modelo de la operación es la etapa clave de la investigación de operaciones. La operación se simplifica y esquematiza, y se destacan los factores esenciales. Se describen el modelo tipo y la clasificación de los problemas.",
+    "url": "https://systems-analysis.ru/es/operation_research_model.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "es",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/es/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/es/operation_research_model.html"
+    },
+    "keywords": [
+        "modelado",
+        "modelo",
+        "investigación de operaciones",
+        "función objetivo",
+        "programación",
+        "problemas",
+        "eficiencia",
+        "óptimos",
+        "matemático",
+        "análisis de sistemas",
+        "solución"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01",
+    "about": {
+        "@type": "DefinedTerm",
+        "name": "Modelo de la operación",
+        "description": "Descripción suficientemente precisa de la operación mediante el aparato matemático: funciones, ecuaciones, sistemas de ecuaciones e inecuaciones.",
+        "sameAs": [
+            "https://systems-analysis.ru/wiki/Модели_исследования_операций",
+            "https://systems-analysis.ru/eng/Operations_research_models"
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://systems-analysis.ru/es/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Investigación de operaciones",
+            "item": "https://systems-analysis.ru/es/operation_research.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Modelos de investigación de operaciones"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Menú</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/es/">Inicio</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/sections.html">Secciones</a>
+        <span aria-hidden="true">·</span>
+        <a href="/wiki/">Wiki</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/books.html">Libros</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/catalog.html">Catálogo</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/operation_research_model.html">English</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Cambiar tema"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Cambiar fuente"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Modelos de investigación de operaciones</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p>Para la aplicación de métodos cuantitativos de investigación es necesario construir un modelo matemático de la operación. Al construir el modelo, la operación se simplifica y esquematiza, por regla general, y el esquema de la operación se describe con la ayuda de uno u otro aparato matemático. El modelo de la operación es una descripción suficientemente precisa de la operación mediante el aparato matemático (funciones de diverso tipo, ecuaciones, sistemas de ecuaciones e inecuaciones). La eficiencia de la operación es el grado de adecuación de esta al cumplimiento de la tarea.</p>
+
+<h2>Planteamiento general del problema de investigación de la operación</h2>
+
+<p>En la investigación de operaciones, la situación de gestión incluye objetivos y decisiones. Las decisiones se toman para alcanzar el objetivo. La situación de gestión se describe mediante un modelo. El modelo contiene un indicador de eficiencia que permite determinar en qué medida la solución se aproxima al objetivo. El indicador de eficiencia depende de los factores que influyen en la operación. Todos los factores que intervienen en la descripción de la operación pueden dividirse en dos grupos: factores constantes, sobre los que no es posible influir, y factores controlables.</p>
+
+<p>Los elementos conceptuales del modelo se representan en forma de «caja negra», donde la atención principal se centra en la definición de las entradas y las salidas. Las entradas son lo que el modelo procesa; las salidas, lo que el modelo produce. A la entrada se suministran las variables controlables y no controlables. A la salida se obtiene el criterio de eficiencia. El modelo contiene un indicador de eficiencia explícito que permite determinar en qué medida la solución se aproxima al objetivo. Al construir el modelo es importante indicar cómo los parámetros de entrada influirán en dicho indicador.</p>
+
+<p>El criterio de eficiencia, expresado mediante una cierta función denominada función objetivo, depende de los factores de ambos grupos. La expresión matemática del criterio de eficiencia se denomina función objetivo. La función objetivo es un indicador de eficiencia formulado (formalizado) matemáticamente, que debe maximizarse o minimizarse.</p>
+
+<p>Las variables controlables son aquellos parámetros que gestiona el decisor.</p>
+
+<p>Las variables no controlables son los factores externos que el responsable no puede controlar, pero que son relevantes para la consecución de los objetivos.</p>
+
+<p>El criterio de eficiencia o función objetivo es la variable que determina el grado de aproximación al objetivo.</p>
+
+<p>Definición del modelo matemático: se entiende por modelo matemático cualquier operador que permite, a partir de los correspondientes valores de los parámetros de entrada, establecer los valores de salida de los parámetros del objeto de modelado dentro del conjunto de valores admisibles de los parámetros de entrada y salida para el objeto modelado.</p>
+
+<h2>Modelos de investigación de operaciones y toma de decisiones</h2>
+
+<p>La investigación de operaciones está orientada a la fundamentación cuantitativa de la toma de decisiones racionales. Estos modelos se intersecan estrechamente con la amplia clase de problemas de la teoría de la decisión y los problemas de optimización.</p>
+
+<p>Al desarrollar un modelo de investigación de operaciones es necesario responder a las siguientes preguntas:</p>
+<ul>
+<li>¿qué se considera, en el caso concreto, como soluciones alternativas?</li>
+<li>¿según qué criterio se seleccionan las soluciones alternativas?</li>
+<li>¿qué restricciones satisfacen las soluciones posibles?</li>
+</ul>
+
+<p>El modelo matemático tipo de la investigación de operaciones se presenta en la siguiente formulación: maximización o minimización de la función objetivo, sujeta al cumplimiento de las restricciones.</p>
+
+<p>Al elegir la solución, se prefiere aquella que lleva la función objetivo a su máximo o mínimo. Ejemplos de maximización de la función objetivo pueden ser el beneficio o la productividad. A la minimización de la función objetivo pueden atribuirse los costes, los gastos, el tiempo, etc. La elección del criterio de eficiencia es el momento central y de mayor responsabilidad de la investigación. Es mucho mejor hallar una solución no óptima con un criterio correctamente elegido que una solución óptima con un criterio elegido erróneamente.</p>
+
+<p>Una solución es admisible si satisface todas las restricciones del modelo. Las soluciones admisibles pueden ser infinitas.</p>
+
+<p>Una solución es óptima si, además de ser admisible, la función objetivo alcanza en ella su valor máximo o mínimo.</p>
+
+<p>Se denominan óptimas las soluciones que, por unos u otros criterios, resultan preferibles a las demás. Cada elección del mejor alternativa es concreta, puesto que se basa en la conformidad con los criterios establecidos. Al hablar de la alternativa óptima, se indican estos criterios («óptimo según…»). Lo que es óptimo según un criterio no lo es necesariamente según otro.</p>
+
+<p>Una restricción es una expresión matemática en forma de inecuación o igualdad que deben satisfacer las variables del modelo.</p>
+
+<p>Las restricciones reducen el conjunto de soluciones admisibles. En algunos casos, bajo las restricciones dadas puede no existir ninguna solución óptima. Esto significa que la calidad de la decisión final, adoptada sobre la base de la resolución del problema, depende de la adecuación con que el modelo representa la situación real que describe formalmente mediante las restricciones. Entre las restricciones figuran las cuotas, la capacidad de carga de los vehículos, el volumen de la tarea planificada, las características de peso del equipamiento, las limitaciones de recursos, etc.</p>
+
+<p>Al modificar la configuración de las restricciones, otra solución puede convertirse en la mejor. En el mundo real, las restricciones pueden tener naturaleza física, económica o política y no siempre son susceptibles de formalización. Una solución concreta será la mejor solo para un modelo dado, con el sistema de restricciones establecido. Cuanto más fielmente refleje el modelo la situación, más próxima estará la solución del problema a la óptima.</p>
+
+<h2>Clasificación de los modelos de investigación de operaciones</h2>
+
+<p>Todos los modelos de investigación de operaciones pueden clasificarse en función de la naturaleza y las propiedades de la operación, el carácter de los problemas resueltos y los métodos matemáticos aplicados:</p>
+<ul>
+<li>si el criterio de eficiencia es una función lineal y las funciones del sistema de restricciones también son lineales, el problema es un problema de programación lineal;</li>
+<li>si, en virtud del sentido sustantivo, sus soluciones deben ser números enteros, se trata de un problema de programación lineal entera;</li>
+<li>si el criterio de eficiencia y/o el sistema de restricciones están definidos por funciones no lineales, se tiene un problema de programación no lineal. En particular, si dichas funciones poseen propiedades de convexidad, el problema resultante es un problema de programación convexa;</li>
+<li>si en el problema de programación matemática interviene la variable tiempo y el criterio de eficiencia no se expresa explícitamente como función de las variables, sino de forma indirecta, a través de ecuaciones que describen el desarrollo de las operaciones en el tiempo, se trata de un problema de programación dinámica;</li>
+<li>si no es posible hallar el óptimo exacto por vía algorítmica debido al excesivo número de alternativas de solución, se recurre a métodos de programación heurística, que permiten reducir sustancialmente el número de alternativas examinadas y encontrar, si no la solución óptima, al menos una solución suficientemente buena y satisfactoria desde el punto de vista práctico.</li>
+</ul>
+
+<p>Según su planteamiento sustantivo, el conjunto de otros problemas típicos de la investigación de operaciones puede dividirse en varias clases:</p>
+<ul>
+<li>los problemas de planificación y gestión en red examinan las relaciones entre los plazos de finalización de un gran complejo de operaciones (trabajos) y los momentos de inicio de todas las operaciones del complejo. Estos problemas consisten en hallar las duraciones mínimas del complejo de operaciones y la relación óptima entre los valores de coste y los plazos de ejecución;</li>
+<li>los problemas de atención masiva (teoría de colas) se dedican al estudio y análisis de los sistemas de servicio con colas de solicitudes o demandas, y consisten en determinar los indicadores de eficiencia del funcionamiento de los sistemas y sus características óptimas, por ejemplo, el número de canales de servicio, el tiempo de servicio, etc.;</li>
+<li>los problemas de gestión de inventarios consisten en hallar los valores óptimos del nivel de existencias (punto de pedido) y del tamaño del pedido. La particularidad de estos problemas reside en que al aumentar el nivel de existencias, por un lado, aumentan los costes de almacenamiento, pero, por otro, disminuyen las pérdidas debidas al posible déficit del producto almacenado;</li>
+<li>los problemas de asignación de recursos surgen cuando existe un determinado conjunto de operaciones (trabajos) que deben ejecutarse con unos recursos disponibles limitados, y se requiere hallar la distribución óptima de los recursos entre las operaciones o la composición de las operaciones;</li>
+<li>los problemas de reparación y sustitución de equipos son relevantes debido al desgaste y la obsolescencia de los equipos y la necesidad de su reemplazo;</li>
+<li>entre los modelos de investigación de operaciones destacan especialmente los modelos de toma de decisiones óptimas en situaciones de conflicto, estudiados por la teoría de juegos. Entre las situaciones de conflicto, en las que chocan los intereses de dos (o más) partes que persiguen objetivos diferentes, pueden incluirse diversas situaciones en el ámbito de la economía, el derecho, los asuntos militares, etc. En los problemas de teoría de juegos es necesario elaborar recomendaciones para el comportamiento racional de los participantes en el conflicto y determinar sus estrategias óptimas.</li>
+</ul>
+
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <div class="links">
+    <div class="links-section">
+      <h2>Investigación de operaciones</h2>
+      <ul>
+        <li><a href="operation_research_caa.html">Introducción a la investigación de operaciones. Churchman, Ackoff, Arnoff</a></li>
+        <li><a href="operation_research_as.html">Fundamentos de la investigación de operaciones. Ackoff, Sasieni</a></li>
+        <li><a href="operation_research_me.html">Investigación de operaciones. Moder, Elmaghraby</a></li>
+        <li><a href="operation_research_vg.html">Fundamentos de la investigación de operaciones. Wagner</a></li>
+        <li><a href="operation_research_gv.html">Organización y gestión. Gvishiani</a></li>
+        <li><a href="operation_research_ve.html">Investigación de operaciones. Ventsel</a></li>
+        <li><a href="methodology_or.html">Metodología de la investigación de operaciones</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="breadcrumbs" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a> <span aria-hidden="true">/</span>
+    <a href="/es/operation_research.html">Investigación de operaciones</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Modelos de investigación de operaciones</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Cambiar tema"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_en">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/operation_research_model.html">English</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/es/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"></button>
+  </footer>
+
+</div>
+
+<script src="../js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+<!-- Microsoft Clarity -->
+<script src="../js/clarity-init.js"></script>
+</body>
+</html>

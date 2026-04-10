@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Requisitos</title>
+<meta name="description" content="Los requisitos definen lo que el producto debe hacer; son la expectativa documentada del resultado de la implementación del proyecto.">
+<meta name="keywords" content="requisitos,ingeniería de sistemas">
+<link rel="canonical" href="https://systems-analysis.ru/es/requirements.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/requirements.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/requirements.html">
+<link rel="alternate" hreflang="es" href="https://systems-analysis.ru/es/requirements.html">
+<meta property="og:title" content="Requisitos">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/es/requirements.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="Los requisitos definen lo que el producto debe hacer; son la expectativa documentada del resultado de la implementación del proyecto.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="../js/theme-init.js"></script>
+<link rel="stylesheet" href="../css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/es/requirements.html#article",
+    "headline": "Requisitos",
+    "description": "Los requisitos definen lo que el producto debe hacer; son la expectativa documentada del resultado de la implementación del proyecto.",
+    "url": "https://systems-analysis.ru/es/requirements.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "es",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/es/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/es/requirements.html"
+    },
+    "keywords": [
+        "requisitos",
+        "ingeniería de sistemas"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01",
+    "about": {
+        "@type": "DefinedTerm",
+        "name": "Requisitos",
+        "description": "Expectativa documentada del resultado de la implementación del proyecto; formulación de lo que debe desarrollarse, incluyendo características, coste, plazos y riesgos.",
+        "sameAs": [
+            "https://www.wikidata.org/entity/Q774228",
+            "https://es.wikipedia.org/wiki/Ingeniería_de_requisitos",
+            "https://en.wikipedia.org/wiki/Requirements_engineering",
+            "https://systems-analysis.ru/wiki/Требования",
+            "https://systems-analysis.ru/eng/Requirements"
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://systems-analysis.ru/es/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Ingeniería de sistemas",
+            "item": "https://systems-analysis.ru/es/systems_engineering.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Requisitos"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Menú</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/es/">Inicio</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/sections.html">Secciones</a>
+        <span aria-hidden="true">·</span>
+        <a href="/wiki/">Wiki</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/books.html">Libros</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/catalog.html">Catálogo</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/requirements.html">English</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Cambiar tema"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Cambiar fuente"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Requisitos</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p>Los <strong>requisitos</strong> definen lo que el producto debe hacer; son la expectativa documentada del resultado de la implementación del proyecto. El documento describe las expectativas del cliente, así como del desarrollador del programa, las funciones y el proyecto en su conjunto. Los requisitos incluyen las características, el coste, los plazos y los riesgos. De este modo, los requisitos constituyen la formulación de lo que es necesario desarrollar, o bien la descripción cuantitativa precisa de lo que se desea obtener como resultado de la implementación del proyecto. Una mala definición de los requisitos es la causa principal de los problemas durante la implementación del proyecto.</p>
+<p>Los requisitos establecen lo que debe hacerse, con qué grado de calidad y bajo qué restricciones. Si los requisitos son incorrectos, el proyecto y el producto resultarán igualmente defectuosos. Los requisitos, junto con las restricciones y las hipótesis correspondientes, descomponen el problema que se ha de resolver en partes constituyentes, lo que en última instancia determina el éxito del proyecto en su conjunto.</p>
+<p><strong>Tipos de requisitos:</strong></p>
+<ul>
+  <li>Los requisitos funcionales definen lo que un determinado elemento del sistema debe hacer.</li>
+  <li>Los requisitos de precisión definen los parámetros cuantitativos de las funciones correspondientes que ejecuta el sistema.</li>
+  <li>Los requisitos de restricción se derivan de las limitaciones del régimen de explotación, las condiciones del entorno, la seguridad o el cumplimiento normativo.</li>
+  <li>Los requisitos de verificación establecen en qué medida puede confiarse en que el sistema posee las características especificadas en el entorno real de funcionamiento.</li>
+  <li>Los requisitos de interfaz definen las funciones, las características, las tolerancias y las restricciones de todas las interfaces.</li>
+  <li>Los requisitos operacionales definen la operatividad del sistema y su interacción con los usuarios.</li>
+</ul>
+<p>En la literatura anglosajona, para memorizar los rasgos de unos buenos requisitos se utiliza el acrónimo SMART:</p>
+<ul>
+  <li>Specific (Específicos): los requisitos deben referirse a una sola particularidad del proyecto o característica del sistema. Deben formularse en términos de qué y con qué grado de calidad debe hacerse, y en ningún caso en términos de una posible solución, es decir, de cómo hacerlo.</li>
+  <li>Measurable (Medibles): el parámetro medible se expresa de forma objetiva y cuantitativa.</li>
+  <li>Achievable (Alcanzables): el requisito debe ser técnicamente alcanzable a un coste razonable.</li>
+  <li>Relevant (Pertinentes): el requisito debe corresponder al nivel del sistema elegido.</li>
+  <li>Traceable (Trazables): los requisitos de nivel inferior deben derivarse explícitamente de los requisitos de nivel superior y/o estar respaldados por ellos. Los requisitos sin requisitos «padre» se consideran «huérfanos» y deben evaluarse en cuanto a la necesidad de su incorporación.</li>
+</ul>
+<p>Necesidad. Si existe alguna duda sobre la necesidad de un requisito, basta con formularse la pregunta: «¿Qué consecuencia negativa tendría para el sistema que este requisito no se incluyese en la lista?». Si no se encuentra respuesta, probablemente el requisito no sea necesario.</p>
+<p>Verificabilidad. Una vez formulado el requisito, es preciso determinar cómo puede verificarse. Para ello es necesario elegir el criterio de conformidad correspondiente.</p>
+<p>Alcanzabilidad. Para ser alcanzable, un requisito debe ser técnicamente realizable en los plazos y al coste dados, en condiciones de existencia de restricciones adicionales. Si existe incertidumbre sobre la viabilidad técnica del requisito, debe realizarse la investigación o el estudio adicional correspondientes. Si aun después de ello la incertidumbre persiste, es preferible formular un <a href="/es/goal.html" class="text-link">objetivo</a>, no un requisito. Es evidente que, incluso si el requisito es técnicamente viable, puede resultar inalcanzable debido a restricciones de coste, plazos u otras, como las de peso. Carece de sentido formular un requisito sobre algo irrealizable: es necesario ser pragmático.</p>
+<p>Claridad. Cada requisito debe expresar una única idea, ser conciso y sencillo. Es importante que el requisito resulte comprensible y no ambiguo. Para los buenos requisitos suelen bastar oraciones simples.</p>
+<p>El requisito debe formularse en forma afirmativa y nunca comenzar con una negación; debe ser gramaticalmente correcto, sin erratas ni omisiones. En todos los niveles del <a href="/es/system.html" class="text-link">sistema</a> debe emplearse la misma terminología.</p>
+</div>
+      </article>
+    </div>
+
+    
+  
+    <div class="links">
+  <div class="links-section">
+    <h2>Artículos relacionados</h2>
+    <ul>
+      <li><a href="systems_engineering.html">Ingeniería de sistemas</a></li>
+      <li><a href="life_cycle.html">Ciclo de vida</a></li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a> <span aria-hidden="true">/</span>
+    <a href="/es/systems_engineering.html">Ingeniería de sistemas</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Requisitos</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Cambiar tema"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_en">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/requirements.html">English</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/es/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"></button>
+  </footer>
+
+</div>
+
+<script src="../js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+<!-- Microsoft Clarity -->
+<script src="../js/clarity-init.js"></script>
+</body>
+</html>

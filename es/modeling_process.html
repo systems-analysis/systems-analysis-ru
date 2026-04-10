@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Proceso de modelado</title>
+<meta name="description" content="El proceso de modelado puede representarse como la transición de modelos de una clase a otra. Se distinguen convencionalmente tres grandes clases de modelos: cognitivos, sustantivos y formales. Constituyen tres niveles interrelacionados de modelado que no pueden considerarse de forma aislada.">
+<meta name="keywords" content="proceso de modelado,modelo,modelado,solución,algoritmo,análisis de sistemas">
+<link rel="canonical" href="https://systems-analysis.ru/es/modeling_process.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/modeling_process.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/modeling_process.html">
+<link rel="alternate" hreflang="es" href="https://systems-analysis.ru/es/modeling_process.html">
+<meta property="og:title" content="Proceso de modelado">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/es/modeling_process.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="El proceso de modelado puede representarse como la transición de modelos de una clase a otra. Se distinguen tres grandes clases: cognitivos, sustantivos y formales.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="../js/theme-init.js"></script>
+<link rel="stylesheet" href="../css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/es/modeling_process.html#article",
+    "headline": "Proceso de modelado",
+    "description": "El proceso de modelado puede representarse como la transición de modelos de una clase a otra. Se distinguen convencionalmente tres grandes clases de modelos: cognitivos, sustantivos y formales.",
+    "url": "https://systems-analysis.ru/es/modeling_process.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "es",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/es/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/es/modeling_process.html"
+    },
+    "keywords": [
+        "proceso de modelado",
+        "modelo",
+        "modelado",
+        "solución",
+        "algoritmo",
+        "análisis de sistemas"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://systems-analysis.ru/es/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Modelado",
+            "item": "https://systems-analysis.ru/es/modelling.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Proceso de modelado"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Menú</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/es/">Inicio</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/sections.html">Secciones</a>
+        <span aria-hidden="true">·</span>
+        <a href="/wiki/">Wiki</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/books.html">Libros</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/catalog.html">Catálogo</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/modeling_process.html">English</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Cambiar tema"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Cambiar fuente"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Proceso de modelado</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p>El proceso de modelado puede representarse como la transición de <a href="/es/model.html" class="text-link">modelos</a> de una clase a otra. Se distinguen convencionalmente tres grandes clases de modelos: cognitivos, sustantivos y formales. Constituyen tres niveles interrelacionados de modelado que no pueden considerarse de forma aislada. La influencia recíproca entre los niveles de modelado está asociada a la propiedad de potencialidad de los modelos. La creación de cualquier modelo va acompañada de la aparición de nuevos conocimientos sobre el objeto investigado, lo que conduce a una reevaluación y una mayor precisión de los conceptos y las visiones sobre el objeto de modelado en los distintos niveles. Esta circunstancia lleva, a su vez, a la revisión de los modelos sustantivos y cognitivos correspondientes, asegurando un desarrollo en espiral de todos los niveles de modelado del objeto investigado.</p>
+<p>Al observar el objeto original, en la mente del investigador se forma una cierta imagen mental del objeto, su modelo ideal, que en la literatura científica se denomina modelo cognitivo (mental, que contribuye al conocimiento). Al formar este modelo, el investigador se propone, por lo general, responder a preguntas concretas, por lo que del infinitamente complejo mecanismo del objeto se eliminan todos los elementos innecesarios con el fin de obtener una descripción más compacta y concisa. La representación del modelo cognitivo en lenguaje natural se denomina modelo sustantivo.</p>
+<p>Los modelos cognitivos son subjetivos, ya que el investigador los forma de manera especulativa sobre la base de todos sus conocimientos y experiencias previos. Solo es posible conocer el modelo cognitivo describiéndolo en forma simbólica. No puede afirmarse que los modelos cognitivos y los sustantivos sean equivalentes, puesto que los primeros pueden contener elementos que el investigador no sea capaz de formular o no desee hacerlo. Al mismo tiempo, si el modelo sustantivo ha sido formulado por otra persona o es fruto del trabajo colectivo, su interpretación, su nivel de comprensión y el grado de confianza pueden variar considerablemente según el intérprete. Con frecuencia se denomina al modelo sustantivo planteamiento técnico del problema.</p>
+<p><strong>Según su función y sus objetivos, los modelos sustantivos se subdividen en descriptivos, explicativos y predictivos:</strong></p>
+<ul>
+  <li>Puede denominarse modelo descriptivo a cualquier descripción de un objeto.</li>
+  <li>El modelo explicativo permite responder a la pregunta de por qué algo sucede.</li>
+  <li>El modelo predictivo debe describir el comportamiento futuro del objeto. Cabe señalar que un modelo predictivo no tiene por qué incluir necesariamente uno explicativo.</li>
+</ul>
+<p>Se denomina modelo conceptual al modelo sustantivo formulado utilizando los conceptos y las representaciones de las áreas temáticas del conocimiento dedicadas al estudio del objeto de modelado.</p>
+<p>En un sentido más amplio, por modelo conceptual se entiende un modelo sustantivo basado en un determinado concepto o punto de vista. Se distinguen tres tipos de modelos conceptuales: lógico-semánticos, estructural-funcionales y causales.</p>
+<ul>
+  <li>El modelo lógico-semántico es una descripción del objeto en los términos y definiciones de las correspondientes áreas temáticas del conocimiento, que incluye todas las afirmaciones y hechos conocidos que sean lógicamente consistentes. El análisis de estos modelos se realiza mediante herramientas lógicas con el concurso de los conocimientos acumulados en las áreas temáticas correspondientes.</li>
+  <li>Al construir un modelo estructural-funcional, el objeto se considera habitualmente como un sistema íntegro que se descompone en elementos o subsistemas independientes. Las partes del sistema se vinculan mediante relaciones estructurales que describen la subordinación, la secuencia lógica y temporal de la resolución de las distintas tareas. Para la representación de estos modelos resultan útiles diversos tipos de esquemas, mapas y diagramas.</li>
+  <li>El modelo causal se emplea con frecuencia para explicar y pronosticar el comportamiento del objeto. Estos modelos están orientados fundamentalmente a: 1) la identificación de las principales interrelaciones entre los elementos constituyentes del objeto estudiado; 2) la determinación de cómo la variación de unos factores influye en el estado de los componentes del modelo; 3) la comprensión de cómo funcionará el modelo en su conjunto y si describirá de forma adecuada la dinámica de los parámetros de interés para el investigador.</li>
+</ul>
+<p>El modelo formal es la representación del modelo conceptual mediante uno o varios lenguajes formales (por ejemplo, lenguajes de teorías matemáticas, lenguajes especiales de modelado o lenguajes algorítmicos). En las ciencias humanas, el proceso de modelado se completa en muchos casos con la creación de un modelo conceptual del objeto. En las ciencias naturales y exactas, por regla general, es posible construir un modelo formal.</p>
+<p>Si el valor de los modelos sustantivos y formales para el proceso de conocimiento es más o menos reconocido por los investigadores, el papel de los modelos cognitivos suele subestimarse. Esto se debe a la subjetividad de tales modelos y al carácter oculto del proceso de pensamiento. Sin embargo, existen objetos y procesos para los que el papel de los modelos cognitivos es especialmente importante. Por ejemplo, un operador o un decisor gestiona el objeto o el proceso principalmente sobre la base de sus propios modelos cognitivos. El papel de este tipo de modelos es también considerable en las ciencias sociales.</p>
+<p>El modelado matemático es un modelado ideal, científico, simbólico y formal en el que la descripción del objeto se realiza en el lenguaje de las matemáticas y la investigación del modelo se lleva a cabo utilizando los correspondientes métodos matemáticos.</p>
+<p>Cualquier modelo matemático destinado a la investigación científica permite, a partir de los datos iniciales dados, hallar los valores de los parámetros del objeto o fenómeno modelado que interesan al investigador. Por ello, puede suponerse que la esencia de cualquier modelo de este tipo consiste en la proyección de un determinado conjunto de valores de los parámetros de entrada sobre el conjunto de valores de los parámetros de salida. Esta circunstancia permite considerar el modelo matemático como un cierto operador matemático. El concepto de operador puede interpretarse de forma bastante amplia. Puede tratarse tanto de una función que relaciona los valores de entrada y salida, como de una representación que constituye la escritura simbólica de un <a href="/es/system.html" class="text-link">sistema</a> de ecuaciones algebraicas, diferenciales, integrodiferenciales o integrales. Puede tratarse de un algoritmo, un conjunto de reglas o tablas que aseguran la determinación (o el establecimiento) de los parámetros de salida a partir de los valores iniciales dados.</p>
+<p>La definición del modelo matemático a través del concepto de operador resulta más constructiva desde el punto de vista de la clasificación de tales modelos, puesto que abarca toda la diversidad de modelos matemáticos existentes en la actualidad.</p>
+<p><strong>Ventajas del modelado matemático en comparación con el experimento a escala natural:</strong></p>
+<ul>
+  <li>economía (en particular, ahorro de recursos del sistema real);</li>
+  <li>posibilidad de modelar objetos hipotéticos, es decir, no realizados en la naturaleza;</li>
+  <li>posibilidad de reproducir regímenes peligrosos o difícilmente reproducibles a escala natural;</li>
+  <li>posibilidad de modificar la escala temporal;</li>
+  <li>facilidad del análisis multiaspecto;</li>
+  <li>mayor capacidad predictiva, gracias a la posibilidad de identificar regularidades generales;</li>
+  <li>universalidad del equipamiento técnico y del software empleado (sistemas de programación y paquetes de aplicaciones de uso general).</li>
+</ul>
+<p>El modelo informativo es un modelo del objeto representado en forma de información que describe los parámetros y variables significativos del objeto para el análisis en cuestión, las relaciones entre ellos, las entradas y salidas del objeto, y que permite, al suministrar al modelo información sobre los cambios en las magnitudes de entrada, simular los posibles estados del objeto.</p>
+</div>
+      </article>
+    </div>
+
+    
+  
+    <div class="links">
+  <div class="links-section">
+    <h2>Artículos relacionados</h2>
+    <ul>
+      <li><a href="model.html">Modelo</a></li>
+      <li><a href="modelling.html">Modelado</a></li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a> <span aria-hidden="true">/</span>
+    <a href="/es/modelling.html">Modelado</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Proceso de modelado</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Cambiar tema"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_en">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/modeling_process.html">English</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/es/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"></button>
+  </footer>
+
+</div>
+
+<script src="../js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+<!-- Microsoft Clarity -->
+<script src="../js/clarity-init.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Metodología de Golubkov</title>
+<meta name="description" content="Etapas del análisis de sistemas según E. P. Golubkov: planteamiento de la tarea, investigación, análisis, juicio preliminar, confirmación, juicio definitivo e implementación de la decisión adoptada.">
+<meta name="keywords" content="análisis de sistemas,metodología de Golubkov,método,decisión,problema,objetivo,resultado,etapa">
+<link rel="canonical" href="https://systems-analysis.ru/es/golubkov_method.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/golubkov_method.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/golubkov_method.html">
+<link rel="alternate" hreflang="es" href="https://systems-analysis.ru/es/golubkov_method.html">
+<meta property="og:title" content="Metodología de Golubkov">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/es/golubkov_method.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="Etapas del análisis de sistemas según E. P. Golubkov: planteamiento de la tarea, investigación, análisis, juicio preliminar, confirmación, juicio definitivo e implementación de la decisión adoptada.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="../js/theme-init.js"></script>
+<link rel="stylesheet" href="../css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/es/golubkov_method.html#article",
+    "headline": "Metodología de Golubkov",
+    "description": "Etapas del análisis de sistemas según E. P. Golubkov: planteamiento de la tarea, investigación, análisis, juicio preliminar, confirmación, juicio definitivo e implementación de la decisión adoptada.",
+    "url": "https://systems-analysis.ru/es/golubkov_method.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "es",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/es/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/es/golubkov_method.html"
+    },
+    "keywords": [
+        "análisis de sistemas",
+        "metodología de Golubkov",
+        "método",
+        "decisión",
+        "problema",
+        "objetivo",
+        "resultado",
+        "etapa"
+    ],
+    "editor": {
+        "@type": "Person",
+        "name": "Yuriy Dmitrishin",
+        "url": "https://dmitrishin.github.io/"
+    },
+    "citation": {
+        "@type": "Book",
+        "name": "Использование системного анализа в отраслевом планировании",
+        "author": {
+            "@type": "Person",
+            "name": "Голубков Е.П."
+        },
+        "datePublished": "1977",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Экономика"
+        },
+        "inLanguage": "ru"
+    },
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01",
+    "mainEntity": {
+        "@type": "Book",
+        "name": "Использование системного анализа в отраслевом планировании",
+        "author": {
+            "@type": "Person",
+            "name": "Golubkov E.P."
+        },
+        "datePublished": "1977",
+        "inLanguage": "ru"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://systems-analysis.ru/es/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Análisis de sistemas",
+            "item": "https://systems-analysis.ru/es/systems_analysis.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Metodología de Golubkov"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Menú</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/es/">Inicio</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/sections.html">Secciones</a>
+        <span aria-hidden="true">·</span>
+        <a href="/wiki/">Wiki</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/books.html">Libros</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/catalog.html">Catálogo</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/golubkov_method.html">English</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Cambiar tema"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Cambiar fuente"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Metodología de Golubkov</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p><strong>Etapas del análisis de sistemas según E. P. Golubkov</strong></p>
+<ol>
+  <li>Planteamiento de la tarea</li>
+  <li>Investigación</li>
+  <li>Análisis</li>
+  <li>Juicio preliminar</li>
+  <li>Confirmación</li>
+  <li>Juicio definitivo</li>
+  <li>Implementación de la decisión adoptada</li>
+</ol>
+<p>El análisis de sistemas se lleva a cabo, por regla general, mediante aproximaciones sucesivas al resultado requerido y comprende las siguientes etapas (procedimientos).</p>
+<p>1. <strong>Planteamiento de la tarea</strong></p>
+<p>Se determinan los objetivos finales y el conjunto de cuestiones que requieren solución, se analizan las condiciones en las que funciona el <a href="/es/system.html" class="text-link">sistema</a> y se establecen las restricciones impuestas a las condiciones de funcionamiento del sistema.</p>
+<p>2. <strong>Investigación</strong></p>
+<p>Se determinan, analizan y sintetizan los datos necesarios para la resolución del <a href="/es/problem.html" class="text-link">problema</a>, se estudia la estructura del sistema (problema) analizado, se establecen las relaciones y se identifican los distintos programas de acción para resolver la tarea. Durante el análisis preliminar de los problemas surgidos es necesario procurar determinar el conjunto más completo posible de métodos para su resolución.</p>
+<p>Habitualmente existen varias alternativas distintas para alcanzar los objetivos. En este caso, en la etapa de investigación es necesario encontrar un modo de selección de alternativas para su examen detallado en las etapas posteriores del análisis, que garantice la exclusión de las acciones manifiestamente irracionales. Los especialistas en análisis de sistemas, para evitar un enfoque de miras estrechas, deben conocer los distintos puntos de vista sobre el problema que se está resolviendo.</p>
+<p>Los problemas actuales de planificación y gestión tienen un carácter integral, y su resolución exige considerar la totalidad de los factores principales que influyen en el problema. Simplificar la tarea hasta el examen de elementos aislados y desatender las interrelaciones conduce a la adopción de decisiones erróneas. Los resultados más completos cabe esperarlos cuando el grupo de investigación que realiza el análisis de sistemas cuenta con un especialista que, al menos en términos generales, tiene una visión de conjunto del problema.</p>
+<p>La primera y la segunda etapas del análisis de sistemas son las menos formalizables. A la hora de determinar los objetivos de la actividad y las vías para alcanzarlos, es necesario apoyarse en gran medida en la capacidad de pensamiento creativo, en la experiencia previa y en la intuición de los especialistas que llevan a cabo el análisis de sistemas y toman las decisiones.</p>
+<p>3. <strong>Análisis</strong></p>
+<p>Se construyen <a href="/es/model.html" class="text-link">modelos</a>, se eligen los criterios de eficiencia y se utilizan para predecir las consecuencias de la elección de uno u otro curso de acción, comparando las distintas alternativas de solución desde el punto de vista de dichas consecuencias. Dado que los modelos se construyen para un determinado rango de variación de sus parámetros, el análisis de los resultados obtenidos debe realizarse dentro de ese rango.</p>
+<p>Los métodos y modelos económico-matemáticos ofrecen grandes posibilidades; sin embargo, no debe olvidarse que deben aplicarse conjuntamente con los métodos no formales del análisis de sistemas, pues de lo contrario la tarea puede quedar tan simplificada o incluso distorsionada que pierda su valor práctico. Algunos problemas solo pueden resolverse mediante procedimientos no formales.</p>
+<p>Como resultado del análisis comparativo de las distintas alternativas de solución de los problemas surgidos, se elaboran recomendaciones para los responsables de la toma de decisiones. Este es, propiamente, el producto del análisis de sistemas. No obstante, la descripción del proceso de análisis de sistemas quedaría incompleta sin caracterizar brevemente las etapas subsiguientes que llevan las recomendaciones hasta su implementación práctica.</p>
+<p>4-5. <strong>Juicio preliminar y confirmación de las decisiones adoptadas</strong></p>
+<p>Sobre la base de los datos obtenidos en la segunda y la tercera etapa del análisis de sistemas, así como con la ayuda de cualquier otra información, se seleccionan las mejores vías para alcanzar los objetivos y se elaboran conclusiones y recomendaciones sobre el curso de acción. Como ya se ha señalado, al elegir una u otra alternativa de solución, el directivo puede tener en cuenta una serie de factores adicionales desconocidos para los analistas de sistemas.</p>
+<p>6. <strong>Juicio definitivo (selección final de la mejor alternativa de solución del problema)</strong></p>
+<p>Se realiza sobre la base de la verificación experimental de los resultados de la cuarta etapa del análisis.</p>
+<p>7. <strong>Implementación de la decisión adoptada</strong></p>
+<p>Se transmite la decisión adoptada a los ejecutores, se organiza su ejecución y control y, en caso necesario, se introducen correcciones en la decisión previamente adoptada.</p>
+<p>Todo análisis contiene, en mayor o menor medida, estas siete etapas. La primera etapa la realizan conjuntamente el decisor y quienes preparan la decisión (los analistas de sistemas). Las etapas de investigación y análisis las realizan los analistas de sistemas. La cuarta y la sexta etapa las ejecuta, por regla general, el directivo que toma la decisión, mientras que la quinta puede ser realizada por los analistas mediante simulación o bien no realizarse en absoluto.</p>
+<p>Aquí se ha presentado una separación bastante nítida entre las etapas. En realidad, tal separación rara vez existe, puesto que en mayor o menor grado las etapas se desarrollan en paralelo. La secuencia descrita de etapas del análisis de sistemas no se limita habitualmente a una única iteración. Rara vez se logra resolver un problema a la primera. Es posible retornar desde cualquier etapa del análisis a las anteriores. De este modo, el análisis de sistemas es un proceso iterativo. Por ello, durante el análisis es necesario mantener flexibilidad y proceder a la reevaluación de los resultados obtenidos, y en algunos casos modificar las ideas previamente incorporadas al análisis. Tales reevaluaciones no deben considerarse infructuosas. Ciertamente, la alteración constante de objetivos, vías y medios para alcanzarlos es inadmisible, pues impide una orientación clara. Pero igualmente peligroso es el empeño en resolver la tarea planteada en contra del curso real de los acontecimientos.</p>
+</div>
+      </article>
+    </div>
+
+    
+  
+    <div class="links">
+  <div class="links-section">
+    <h2>Metodologías de análisis de sistemas</h2>
+    <ul>
+      <li><a href="methodology_sa.html">Metodología del análisis de sistemas</a></li>
+      <li><a href="quade_method.html">Metodología de Quade</a></li>
+      <li><a href="chernyak_method.html">Metodología de Chernyak</a></li>
+      <li><a href="young_method.html">Metodología de Young</a></li>
+      <li><a href="optner_method.html">Metodología de Optner</a></li>
+    </ul>
+  </div>
+  <div class="links-section">
+    <h2>Artículos relacionados</h2>
+    <ul>
+      <li><a href="systems_analysis.html">Análisis de sistemas</a></li>
+      <li><a href="decision_theory.html">Teoría de la decisión</a></li>
+      <li><a href="decision_making.html">Toma de decisiones</a></li>
+      <li><a href="choice.html">Decisión y elección</a></li>
+      <li><a href="management.html">Gestión</a></li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a> <span aria-hidden="true">/</span>
+    <a href="/es/systems_analysis.html">Análisis de sistemas</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Metodología de Golubkov</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Cambiar tema"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_en">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/golubkov_method.html">English</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/es/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"></button>
+  </footer>
+
+</div>
+
+<script src="../js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+<!-- Microsoft Clarity -->
+<script src="../js/clarity-init.js"></script>
+</body>
+</html>

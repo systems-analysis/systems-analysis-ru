@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Problema de toma de decisiones</title>
+<meta name="description" content="El problema de toma de decisiones consiste en formar el conjunto de alternativas posibles que permitan resolver la situación problemática dentro de las restricciones existentes y seleccionar entre ellas la mejor o varias alternativas preferibles que satisfagan los requisitos establecidos.">
+<meta name="keywords" content="alternativas,decisión,toma de decisiones,análisis de sistemas,restricciones,problema,objetivos,elección,criterio,preferencias">
+<link rel="canonical" href="https://systems-analysis.ru/es/decision_theory_model.html">
+<link rel="alternate" hreflang="ru" href="https://systems-analysis.ru/decision_theory_model.html">
+<link rel="alternate" hreflang="en" href="https://systems-analysis.ru/en/decision_theory_model.html">
+<link rel="alternate" hreflang="es" href="https://systems-analysis.ru/es/decision_theory_model.html">
+<meta property="og:title" content="Problema de toma de decisiones">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://systems-analysis.ru/es/decision_theory_model.html">
+<meta property="og:image" content="https://systems-analysis.ru/assets/mesh_1440-illustration.jpg">
+<meta property="og:description" content="El problema de toma de decisiones consiste en formar el conjunto de alternativas posibles que permitan resolver la situación problemática dentro de las restricciones existentes y seleccionar entre ellas la mejor o varias alternativas preferibles.">
+<meta property="og:site_name" content="systems-analysis.ru">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#fff" id="theme-color">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="System">
+<link rel="manifest" href="/images/site.webmanifest">
+<script src="../js/theme-init.js"></script>
+<link rel="stylesheet" href="../css/styles.css">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://systems-analysis.ru/es/decision_theory_model.html#article",
+    "headline": "Problema de toma de decisiones",
+    "description": "El problema de toma de decisiones consiste en formar el conjunto de alternativas posibles que permitan resolver la situación problemática dentro de las restricciones existentes y seleccionar entre ellas la mejor o varias alternativas preferibles que satisfagan los requisitos establecidos.",
+    "url": "https://systems-analysis.ru/es/decision_theory_model.html",
+    "image": "https://systems-analysis.ru/assets/mesh_1440-illustration.jpg",
+    "inLanguage": "es",
+    "author": {
+        "@id": "https://dmitrishin.github.io/#yuriy-dmitrishin"
+    },
+    "publisher": {
+        "@id": "https://systems-analysis.ru/#org"
+    },
+    "isPartOf": {
+        "@id": "https://systems-analysis.ru/es/#website"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://systems-analysis.ru/es/decision_theory_model.html"
+    },
+    "keywords": [
+        "alternativas",
+        "decisión",
+        "toma de decisiones",
+        "análisis de sistemas",
+        "restricciones",
+        "problema",
+        "objetivos",
+        "elección",
+        "criterio",
+        "preferencias"
+    ],
+    "datePublished": "2018-01-01",
+    "dateModified": "2026-04-01",
+    "about": {
+        "@type": "DefinedTerm",
+        "name": "Problema de toma de decisiones",
+        "description": "Formación del conjunto de alternativas posibles que permitan resolver la situación problemática dentro de las restricciones existentes y selección de las mejores entre ellas.",
+        "sameAs": [
+            "https://systems-analysis.ru/wiki/Задача_принятия_решения",
+            "https://systems-analysis.ru/eng/Decision_problem"
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://systems-analysis.ru/es/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Teoría de la decisión",
+            "item": "https://systems-analysis.ru/es/decision_theory.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Problema de toma de decisiones"
+        }
+    ]
+}
+</script>
+</head>
+<body>
+<div class="wrap" id="top" tabindex="-1">
+
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false">Menú</button>
+      <div class="nav-links" data-template-slot="nav-links">
+        <a href="/es/">Inicio</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/sections.html">Secciones</a>
+        <span aria-hidden="true">·</span>
+        <a href="/wiki/">Wiki</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/books.html">Libros</a>
+        <span aria-hidden="true">·</span>
+        <a href="/es/catalog.html">Catálogo</a>
+        <span aria-hidden="true">·</span>
+        <a href="/en/decision_theory_model.html">English</a>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="theme-toggle nav-theme-toggle" id="theme-toggle-nav" aria-label="Cambiar tema"></button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="font-toggle nav-font-toggle" id="font-toggle-nav" aria-label="Cambiar fuente"></button>
+      </div>
+    </nav>
+    <h1 class="article-title" data-template-slot="page-heading">Problema de toma de decisiones</h1>
+    <div class="article-desc" data-template-slot="page-intro"></div>
+  </header>
+
+  <main>
+    <div class="content">
+      <article class="note">
+<div class="note-text" data-template-slot="article-content">
+          <p>Planteamiento del <strong>problema de toma de decisiones</strong></p>
+<p>El problema de toma de decisiones consiste en formar el conjunto de alternativas posibles que permitan resolver la situación problemática dentro de las restricciones existentes, y en seleccionar entre ellas una alternativa óptima o varias alternativas preferibles que satisfagan los requisitos establecidos. Formalmente, el problema de toma de decisiones D puede expresarse de la siguiente forma generalizada:</p>
+<p>D = ⟨F, A, X, G, P⟩</p>
+<p>Donde:</p>
+<p>F — formulación del problema de toma de decisiones, que incluye una descripción sustantiva del <a href="/es/problem.html" class="text-link">problema</a> planteado y, cuando sea necesario, su representación mediante un modelo, la definición del objetivo u objetivos que deben alcanzarse, así como los requisitos sobre la forma del resultado final;</p>
+<p>A — conjunto de alternativas posibles entre las cuales se realiza la elección. Pueden ser alternativas realmente existentes —que, según el contexto del problema, se presentan como objetos, candidatos, vías para alcanzar el objetivo, acciones, decisiones, etc.— o bien un conjunto hipotético de todas las alternativas teóricamente posibles, que puede incluso ser infinito. La elección solo surge cuando existen al menos dos alternativas posibles de solución del problema;</p>
+<p>X — conjunto de atributos (características, parámetros) que describen las alternativas y sus rasgos distintivos. Como atributos actúan, en primer lugar, indicadores objetivos que caracterizan determinadas propiedades inherentes a las alternativas y que, por lo general, pueden medirse; y en segundo lugar, valoraciones subjetivas que habitualmente se otorgan según criterios específicamente seleccionados o construidos que reflejan aspectos relevantes de las alternativas para los participantes en la elección;</p>
+<p>G — conjunto de condiciones que delimitan el ámbito de las alternativas admisibles de solución del problema. Las restricciones pueden describirse tanto de forma sustantiva como en forma de determinados requisitos formales sobre las alternativas y/o sus atributos. Por ejemplo, pueden ser restricciones sobre los valores de algún atributo, distintos grados de presencia (expresión) de un atributo en unas u otras alternativas, o bien la imposibilidad de la combinación simultánea de determinados valores de atributos en las alternativas realmente existentes;</p>
+<p>P — preferencias de uno o varios decisores, que sirven de base para la evaluación y comparación de las alternativas posibles de solución del problema, la selección de las alternativas admisibles y la búsqueda de la alternativa óptima o aceptable. Con bastante frecuencia, para simplificar el planteamiento del problema de toma de decisiones, parte de la información que describe las preferencias del decisor se convierte en restricciones.</p>
+<p>Los factores que caracterizan la situación problemática se dividen convencionalmente en dos grupos: controlables y no controlables.</p>
+<ul>
+  <li>Los factores controlables, cuya elección depende del decisor, son esencialmente los objetivos fijados, las alternativas para alcanzarlos, las valoraciones subjetivas de las alternativas y el grado de consecución de los objetivos.</li>
+</ul>
+<ul>
+  <li>Los factores no controlables no dependen del decisor. Determinan los atributos objetivos de las alternativas y, en parte, establecen las restricciones sobre la elección de las alternativas posibles.</li>
+</ul>
+<p><strong>Los factores se subdividen además en:</strong></p>
+<ul>
+  <li>determinados o determinísticos, con características conocidas y/o prefijadas con exactitud;</li>
+  <li>probabilísticos o estocásticos, con características aleatorias conocidas y/o prefijadas;</li>
+  <li>indeterminados o desconocidos, con características definidas de forma imprecisa y/o desconocidas, aunque en ocasiones con un rango conocido de variación de sus valores.</li>
+</ul>
+</div>
+      </article>
+    </div>
+
+    
+  
+    <div class="links">
+  <div class="links-section">
+    <h2>Artículos relacionados</h2>
+    <ul>
+      <li><a href="decision_theory.html">Teoría de la decisión</a></li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <nav class="breadcrumbs" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a> <span aria-hidden="true">/</span>
+    <a href="/es/decision_theory.html">Teoría de la decisión</a> <span aria-hidden="true">/</span>
+    <a href="#top" id="scroll-to-top" class="breadcrumb-current" aria-current="page">Problema de toma de decisiones</a>
+  </nav>
+
+  <footer class="footer">
+    <button type="button" class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" aria-label="Cambiar tema"></button>
+    <span class="footer-info">systems-analysis.ru 2026</span> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://t.me/systems_analysis_en">Telegram</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@systems_analysis">YouTube</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/en/decision_theory_model.html">English</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/languages.html">Languages</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <a href="/es/map.html">sitemap</a> <span class="footer-sep" aria-hidden="true">&middot;</span> <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"></button>
+  </footer>
+
+</div>
+
+<script src="../js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(44759323, 'init', {webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44759323" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCD8C8FNSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCD8C8FNSL');
+</script>
+<!-- Microsoft Clarity -->
+<script src="../js/clarity-init.js"></script>
+</body>
+</html>
