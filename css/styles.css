@@ -456,6 +456,14 @@ button:focus-visible {
   content: "Light theme";
 }
 
+:root:lang(es) .theme-toggle::after {
+  content: "Dark theme";
+}
+
+:root:lang(es).dark .theme-toggle::after {
+  content: "Light theme";
+}
+
 .theme-toggle-mobile {
   display: none;
 }
